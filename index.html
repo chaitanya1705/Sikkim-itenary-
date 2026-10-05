@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sikkim + Darjeeling, 7–11 Nov 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Atkinson+Hyperlegible:wght@400;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#F4F7FA; --surface:#FFFFFF; --ink:#172A46; --muted:#5A6B82; --line:#DCE5EE;
+  --blue:#2F6DB5; --red:#B23A3A; --green:#2E8B57; --yellow:#D99A1E; --orange:#E0702F;
+  --sky1:#9DC4EA; --sky2:#EAF2FA; --shadow:0 1px 2px rgba(23,42,70,.06),0 8px 24px rgba(23,42,70,.07);
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --body:"Atkinson Hyperlegible",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --hand:"Caveat","Segoe Script","Bradley Hand",cursive;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#12213A; --surface:#1A2C4A; --ink:#EAF0F7; --muted:#A3B3C8; --line:#2A3E60;
+    --blue:#6FA6E6; --red:#E07272; --green:#5CC28A; --yellow:#F0C04F; --orange:#F39A5E;
+    --sky1:#0F1C33; --sky2:#2B4470; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12213A; --surface:#1A2C4A; --ink:#EAF0F7; --muted:#A3B3C8; --line:#2A3E60;
+  --blue:#6FA6E6; --red:#E07272; --green:#5CC28A; --yellow:#F0C04F; --orange:#F39A5E;
+  --sky1:#0F1C33; --sky2:#2B4470; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  color-scheme:dark;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{max-width:100%}
+a{color:var(--blue)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px;border-radius:6px}
+h1,h2,h3{font-family:var(--display);line-height:1.08;margin:0}
+.wrap{max-width:1240px;margin:0 auto;padding:0 20px}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;min-height:92svh;display:flex;flex-direction:column;justify-content:flex-start;overflow:hidden;
+  background:linear-gradient(180deg,var(--sky1) 0%,var(--sky2) 70%,var(--bg) 100%)}
+.hero-top{display:flex;justify-content:space-between;align-items:center;padding:16px 20px 0;position:relative;z-index:3;max-width:1240px;margin:0 auto;width:100%}
+.brand{font-family:var(--hand);font-size:24px}
+.iconbtn{border:1px solid color-mix(in srgb,var(--ink) 20%,transparent);background:color-mix(in srgb,var(--surface) 70%,transparent);
+  backdrop-filter:blur(6px);border-radius:999px;padding:8px 14px;cursor:pointer;font-size:15px;display:inline-flex;gap:6px;align-items:center}
+.hero-copy{position:relative;z-index:3;max-width:1240px;margin:0 auto;width:100%;padding:5svh 20px 24px}
+.hero h1{font-size:clamp(46px,10vw,124px);font-weight:800;letter-spacing:-.035em;font-variation-settings:"opsz" 96}
+.hero h1 span{display:block}
+.hero .sub{font-size:clamp(17px,2.2vw,22px);margin:14px 0 22px;max-width:36ch;color:var(--ink);opacity:.85}
+.count{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.count div{background:color-mix(in srgb,var(--surface) 75%,transparent);backdrop-filter:blur(6px);border-radius:14px;padding:10px 14px;min-width:72px;text-align:center}
+.count b{display:block;font-family:var(--display);font-size:28px;font-weight:800;line-height:1}
+.count small{font-size:13px;color:var(--muted)}
+.ctas{display:flex;gap:10px;flex-wrap:wrap}
+.btn{border:0;border-radius:999px;padding:12px 20px;cursor:pointer;font-weight:700;font-size:16px;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn.ghost{background:color-mix(in srgb,var(--surface) 70%,transparent);color:var(--ink);border:1px solid color-mix(in srgb,var(--ink) 18%,transparent)}
+.ridgebox{position:relative;margin-top:auto;height:clamp(170px,34svh,400px)}
+.ridge{position:absolute;inset:0;width:100%;height:100%}
+.rlbl{position:absolute;transform:translate(-50%,-100%);font-family:var(--display);font-weight:700;font-size:13px;white-space:nowrap;padding-bottom:10px;opacity:0;transition:opacity .6s}
+.rlbl::after{content:"";position:absolute;left:50%;bottom:0;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:var(--surface);border:2px solid var(--ink);transform:translateY(50%)}
+.ridgebox.drawn .rlbl{opacity:1}
+.ridge .r-line{fill:none;stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round}
+.ridge .r-fill{fill:var(--bg)}
+.ridge .r-back{fill:color-mix(in srgb,var(--ink) 10%,transparent)}
+.ridge text{font-family:var(--display);font-size:13px;fill:var(--ink);font-weight:600}
+.ridge .r-dot{fill:var(--surface);stroke:var(--ink);stroke-width:2}
+.ridge .r-lbl{opacity:0;transition:opacity .6s}
+.ridge.drawn .r-lbl{opacity:1}
+.ridge-cap{position:absolute;z-index:2;right:20px;bottom:10px;font-size:13px;color:var(--muted)}
+.live{margin-top:18px;display:inline-flex;align-items:center;gap:10px;background:var(--surface);border-radius:14px;padding:10px 14px;box-shadow:var(--shadow);font-size:15px;max-width:100%}
+.pulse{width:10px;height:10px;border-radius:50%;background:var(--green);flex:none;box-shadow:0 0 0 0 color-mix(in srgb,var(--green) 60%,transparent);animation:pulse 2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px transparent}100%{box-shadow:0 0 0 0 transparent}}
+
+/* ---------- PRAYER FLAGS ---------- */
+.flags{display:block;width:100%;height:46px}
+.flags rect{transform-box:fill-box;transform-origin:top center;animation:flutter 3.2s ease-in-out infinite}
+@keyframes flutter{0%,100%{transform:skewX(0) rotate(0)}50%{transform:skewX(-6deg) rotate(2deg)}}
+
+/* ---------- JOURNEY ---------- */
+.journey{display:grid;grid-template-columns:1fr;gap:0}
+.journey>*,.card>div{min-width:0}
+.live[hidden]{display:none}
+.panel{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 14px;cursor:pointer;font-size:14px;font-weight:700;white-space:nowrap;transition:background .3s,color .3s}
+.chip[aria-current="true"]{background:var(--dc,var(--ink));color:#fff;border-color:transparent}
+.mapbox{position:relative;height:240px;transition:height .45s ease}
+.panel.mini .mapbox{height:0;overflow:hidden}
+.map{position:absolute;inset:0;width:100%;height:100%;display:block}
+.mapbox{min-height:0}
+@media (max-width:959px){.mapbox .mapnote{left:auto;right:8px;bottom:auto;top:6px}}
+.mapbox .mapnote{width:max-content;height:auto;pointer-events:none;z-index:2}
+.nowline{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 16px 10px;font-size:14px}
+.nowline b{font-family:var(--display)}
+.map .land{fill:color-mix(in srgb,var(--green) 9%,var(--surface))}
+.map .sikkim{fill:color-mix(in srgb,var(--blue) 12%,var(--surface));stroke:color-mix(in srgb,var(--blue) 40%,transparent);stroke-width:.8}
+.map .wb{fill:color-mix(in srgb,var(--green) 12%,var(--surface));stroke:color-mix(in srgb,var(--green) 35%,transparent);stroke-width:.8}
+.map .ctry{fill:color-mix(in srgb,var(--ink) 6%,var(--bg));stroke:color-mix(in srgb,var(--ink) 28%,transparent);stroke-width:1;stroke-dasharray:3 3}
+.map .dist{font-size:10px;fill:color-mix(in srgb,var(--blue) 70%,var(--muted));font-family:var(--display);font-style:italic}
+.map .river{fill:none;stroke:color-mix(in srgb,var(--blue) 55%,transparent);stroke-width:3;stroke-linecap:round}
+.map .route-bg{fill:none;stroke:color-mix(in srgb,var(--ink) 18%,transparent);stroke-width:3;stroke-dasharray:2 6;stroke-linecap:round;stroke-linejoin:round}
+.map .route{fill:none;stroke:var(--ink);stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round}
+.map .pin circle{fill:var(--surface);stroke:var(--ink);stroke-width:2;transition:r .3s,fill .3s}
+.map .pin.on circle{fill:var(--orange);r:8}
+.map .pin text{font-size:12px;font-weight:700;fill:var(--ink);font-family:var(--display);paint-order:stroke;stroke:var(--bg);stroke-width:4px}
+.map .pin{cursor:pointer}
+@media (max-width:959px){.map .dist{display:none}.map .pin text{font-size:19px;stroke-width:5px}.map .pin[data-place="Baba"] text,.map .pin[data-place="Batasia"] text,.map .region{display:none}.map .veh{font-size:30px}}
+.ridge .r-line,.ridge path{vector-effect:non-scaling-stroke}
+.map .region{font-size:11px;letter-spacing:.1em;fill:var(--muted);font-family:var(--display)}
+.map .veh{font-size:22px}
+.mapnote{position:absolute;left:8px;bottom:6px;background:color-mix(in srgb,var(--surface) 85%,transparent);padding:2px 8px;border-radius:999px;font-size:11px;color:var(--muted)}
+
+.days{padding:8px 16px 40px}
+.day{padding-top:28px}
+.dayhead{display:grid;grid-template-columns:auto 1fr;gap:4px 14px;align-items:end;margin-bottom:6px}
+.daynum{grid-row:span 2;font-family:var(--display);font-weight:800;font-size:64px;line-height:.85;color:var(--dc);letter-spacing:-.04em}
+.daydate{font-weight:700;color:var(--muted);font-size:15px}
+.dayhead h2{font-size:clamp(26px,4vw,36px);letter-spacing:-.02em}
+.dayroute{font-size:15px;color:var(--muted);margin:6px 0 16px}
+.gmbtn{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;padding:9px 15px;border-radius:999px;border:1px solid var(--dc);color:var(--ink);text-decoration:none;font-weight:700;font-size:15px;background:color-mix(in srgb,var(--dc) 8%,var(--surface))}
+.gmbtn:hover{background:color-mix(in srgb,var(--dc) 18%,var(--surface))}
+.daynote{background:color-mix(in srgb,var(--dc) 12%,var(--surface));border-left:4px solid var(--dc);border-radius:10px;padding:10px 14px;font-size:15px;margin:0 0 16px}
+
+.stops{list-style:none;margin:0;padding:0 0 0 18px;position:relative}
+.stops::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:2px;background:linear-gradient(var(--dc),color-mix(in srgb,var(--dc) 20%,transparent))}
+.stop{position:relative;margin:0 0 14px}
+.stop::before{content:"";position:absolute;left:-18px;top:22px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:3px solid var(--dc);transition:transform .3s,background .3s}
+.stop.active::before{background:var(--dc);transform:scale(1.25)}
+.card{width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:10px;display:grid;grid-template-columns:104px 1fr;gap:12px;cursor:pointer;box-shadow:var(--shadow);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-2px)}
+.stop.active .card{border-color:var(--dc)}
+.thumb{border-radius:11px;overflow:hidden;aspect-ratio:4/3;background:var(--line)}
+.thumb svg{display:block;width:100%;height:100%}
+.time{font-weight:700;font-size:14px;color:var(--dc)}
+.card h3{font-size:19px;letter-spacing:-.01em;margin:2px 0 4px}
+.short{font-size:15px;color:var(--muted);margin:0}
+.badges{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.badge{font-size:12.5px;font-weight:700;border-radius:999px;padding:3px 9px;background:var(--bg);border:1px solid var(--line)}
+.badge.pap,.badge.nathula{background:color-mix(in srgb,var(--red) 14%,var(--surface));border-color:color-mix(in srgb,var(--red) 40%,transparent);color:var(--red)}
+.badge.none{color:var(--green)}
+.badge.star{background:color-mix(in srgb,var(--yellow) 22%,var(--surface));border-color:transparent}
+.more{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease}
+.stop.open .more{grid-template-rows:1fr}
+.more>div{overflow:hidden}
+.detail{background:var(--surface);border:1px solid var(--line);border-top:0;border-radius:0 0 16px 16px;margin:-10px 0 0;padding:20px 14px 14px}
+.bigscene{border-radius:12px;overflow:hidden;height:clamp(150px,26vw,230px);margin-bottom:12px}
+.bigscene svg{display:block;width:100%;height:100%}
+.detail ul{margin:0 0 10px;padding-left:20px}
+.detail li{margin:3px 0}
+.detail .tip{font-size:15px;background:var(--bg);border-radius:10px;padding:8px 12px;margin:8px 0}
+.photolink{display:inline-flex;gap:6px;align-items:center;font-weight:700;text-decoration:none;font-size:15px;padding:8px 14px;border-radius:999px;border:1px solid var(--line)}
+
+/* ---------- SECTIONS ---------- */
+section.block{padding:56px 0 8px}
+.block h2{font-size:clamp(30px,5vw,48px);letter-spacing:-.025em;margin-bottom:6px}
+.lede{color:var(--muted);max-width:60ch;margin:0 0 20px}
+.chartcard{background:var(--surface);border-radius:20px;padding:16px;box-shadow:var(--shadow);border:1px solid var(--line)}
+.alt svg{width:100%;height:auto;display:block}
+.alt .grid line{stroke:var(--line)}
+.alt .grid text,.alt .xl{font-size:11px;fill:var(--muted);font-family:var(--body)}
+.alt .zone{fill:color-mix(in srgb,var(--blue) 12%,transparent)}
+.alt .zonelbl{font-size:11px;fill:var(--blue);font-weight:700}
+.alt .area{fill:color-mix(in srgb,var(--blue) 18%,transparent)}
+.alt .ln{fill:none;stroke:var(--blue);stroke-width:2.5;stroke-linejoin:round}
+.alt .pt{fill:var(--surface);stroke:var(--blue);stroke-width:2.5;cursor:pointer;transition:r .2s}
+.alt .pt.sel{fill:var(--blue);r:7}
+.alttip{margin-top:10px;padding:12px 14px;border-radius:12px;background:var(--bg);font-size:15px;min-height:72px}
+.alttip b{font-family:var(--display);font-size:18px}
+.tips3{display:grid;gap:10px;margin-top:14px;grid-template-columns:1fr}
+.tips3 div{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;font-size:15px}
+
+.two{display:grid;gap:20px;grid-template-columns:1fr}
+.list{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:6px 16px;box-shadow:var(--shadow)}
+.prow{display:grid;grid-template-columns:1fr auto;gap:8px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px;align-items:center}
+.prow:last-child{border-bottom:0}
+.prow small{display:block;color:var(--muted)}
+.check{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:15.5px}
+.check:last-child{border-bottom:0}
+.check input{appearance:none;flex:none;width:22px;height:22px;border-radius:7px;border:2px solid var(--muted);margin:1px 0 0;display:grid;place-content:center;cursor:pointer;transition:background .2s,border-color .2s}
+.check input::after{content:"";width:10px;height:6px;border:solid #fff;border-width:0 0 3px 3px;transform:rotate(-45deg) scale(0);transition:transform .2s;margin-top:-3px}
+.check input:checked{background:var(--green);border-color:var(--green)}
+.check input:checked::after{transform:rotate(-45deg) scale(1)}
+.check input:checked+span{text-decoration:line-through;color:var(--muted)}
+.check small{display:block;color:var(--muted);text-decoration:none}
+.packhead{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.ring{width:64px;height:64px;flex:none}
+.ring circle{fill:none;stroke-width:7}
+.ring .bgc{stroke:var(--line)}
+.ring .fg{stroke:var(--green);stroke-linecap:round;transform:rotate(-90deg);transform-origin:50% 50%;transition:stroke-dashoffset .5s}
+.ring text{font-family:var(--display);font-weight:800;font-size:15px;fill:var(--ink)}
+.cats{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.cat{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:7px 13px;cursor:pointer;font-size:14px;font-weight:700}
+.cat[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.linkbtn{background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font-size:14px;padding:4px 0}
+
+.brief{background:var(--ink);color:var(--bg);border-radius:22px;padding:22px;position:relative;overflow:hidden}
+.brief blockquote{margin:0 0 16px;font-size:clamp(17px,2vw,20px);line-height:1.5;max-width:62ch}
+.brief .btn{background:var(--bg);color:var(--ink)}
+.brief .btn.alt2{background:transparent;color:var(--bg);border:1px solid color-mix(in srgb,var(--bg) 40%,transparent)}
+.fineprint{font-size:14px;color:var(--muted);max-width:70ch;margin-top:20px}
+
+footer{padding:60px 0 50px;text-align:center}
+.sig{width:min(420px,90%);height:auto;margin:0 auto;display:block}
+.sig text{font-family:var(--hand);font-size:76px;fill:transparent;stroke:var(--ink);stroke-width:1.2;stroke-dasharray:900;stroke-dashoffset:900}
+.sig.go text{animation:write 2.6s ease forwards}
+@keyframes write{70%{stroke-dashoffset:0;fill:transparent}100%{stroke-dashoffset:0;fill:var(--ink)}}
+.sig path{fill:none;stroke:var(--orange);stroke-width:3;stroke-linecap:round;stroke-dasharray:400;stroke-dashoffset:400}
+.sig.go path{animation:draw 1s 2.2s ease forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+footer p{color:var(--muted);font-size:14px;margin:4px 0}
+
+.gbtn{display:inline-flex;gap:8px;align-items:center;font-weight:700;font-size:15px;padding:10px 16px;border-radius:999px;border:0;background:var(--ink);color:var(--bg);cursor:pointer}
+.sheetbg{position:fixed;inset:0;background:rgba(10,20,40,.55);z-index:80;opacity:0;pointer-events:none;transition:opacity .3s}
+.sheetbg.on{opacity:1;pointer-events:auto}
+.sheet{position:fixed;left:0;right:0;bottom:0;z-index:81;background:var(--surface);border-radius:22px 22px 0 0;max-height:88svh;overflow:auto;transform:translateY(105%);transition:transform .4s cubic-bezier(.2,.8,.2,1);padding-bottom:calc(env(safe-area-inset-bottom,0px) + 18px)}
+.sheet.on{transform:none}
+.sheet .hero2{height:210px;position:relative;overflow:hidden;border-radius:22px 22px 0 0}
+.sheet .hero2 svg{width:100%;height:100%;display:block}
+.sheet .hero2::before{content:"";position:absolute;left:50%;top:8px;width:44px;height:5px;margin-left:-22px;border-radius:9px;background:rgba(255,255,255,.8);z-index:2}
+.sheet .hero2 h3{position:absolute;left:18px;bottom:14px;right:18px;color:#fff;font-size:28px;text-shadow:0 2px 14px rgba(0,0,0,.55);z-index:2}
+.sheet .in{padding:16px 18px}
+.gstrip{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:4px 0 14px}
+.gstrip div{border-radius:12px;background:var(--bg);padding:10px 12px}
+.gstrip small{display:block;color:var(--muted);font-size:12.5px}
+.gstrip b{font-size:14.5px;line-height:1.3;display:block}
+.srcs{display:grid;gap:10px;grid-template-columns:1fr 1fr}
+.src{display:flex;gap:10px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:14px;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+.src:hover{border-color:var(--blue);transform:translateY(-1px)}
+.src b{display:block;font-size:15px}.src small{color:var(--muted);font-size:13px;line-height:1.3;display:block}
+.src .ic{font-size:22px}
+.closex{position:absolute;right:12px;top:12px;z-index:3;border:0;border-radius:999px;width:38px;height:38px;background:rgba(0,0,0,.45);color:#fff;font-size:17px;cursor:pointer}
+@media (max-width:420px){.srcs{grid-template-columns:1fr}}
+@media (min-width:760px){.sheet{left:50%;right:auto;top:50%;bottom:auto;width:600px;border-radius:22px;transform:translate(-50%,-46%) scale(.96);opacity:0;transition:transform .35s,opacity .3s;pointer-events:none}.sheet.on{transform:translate(-50%,-50%);opacity:1;pointer-events:auto}.sheet .hero2{height:260px}.sheet .hero2::before{display:none}}
+.planname{display:inline-block;margin:14px 0 0;font-weight:700;font-size:14px;padding:5px 12px;border-radius:999px;background:color-mix(in srgb,var(--surface) 75%,transparent)}
+.planswitch{position:fixed;z-index:60;display:flex;gap:4px;padding:5px;border-radius:18px;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(10px);box-shadow:0 6px 28px rgba(15,30,60,.22);border:1px solid var(--line);
+  left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 12px);transform:translateX(-50%);width:max-content;max-width:calc(100% - 24px)}
+.planswitch button{border:0;background:transparent;border-radius:14px;padding:8px 14px;cursor:pointer;text-align:left;line-height:1.15;transition:background .3s,color .3s}
+.planswitch b{display:block;font-family:var(--display);font-size:15px}
+@media (max-width:959px){.planswitch small{white-space:nowrap}}
+@media (max-width:400px){.planswitch button{padding:7px 10px}.planswitch small{font-size:11px}}
+.planswitch small{font-size:12px;opacity:.75}
+.planswitch button[aria-checked="true"]{background:var(--ink);color:var(--bg)}
+@media (min-width:960px){.planswitch{left:auto;right:14px;bottom:auto;top:50%;transform:translateY(-50%);flex-direction:column;width:172px}.planswitch button{padding:12px 14px}}
+@media (min-width:960px) and (max-width:1460px){main.journey{padding-right:200px}body .wrap{padding-right:200px}}
+@media (max-width:959px){footer{padding-bottom:110px}.toast{bottom:calc(env(safe-area-inset-bottom,0px) + 86px)!important}}
+.days.swap{animation:swapin .6s ease}
+@keyframes swapin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);transform:translate(-50%,120px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-weight:700;transition:transform .35s;z-index:99;font-size:15px}
+.toast.show{transform:translate(-50%,0);opacity:1}
+.toast{pointer-events:none;opacity:0;transition:transform .35s,opacity .3s}
+
+/* scenes */
+.scene .cloud{animation:drift 14s linear infinite alternate}
+.scene .plane{animation:fly 6s ease-in-out infinite alternate}
+.scene .cabin{animation:cable 7s ease-in-out infinite alternate}
+.scene .sun{animation:rise 6s ease-out infinite alternate}
+.scene .glow{animation:glow 2.5s ease-in-out infinite alternate}
+.scene .cab{animation:bob 1.2s ease-in-out infinite}
+.scene .train{animation:chug 8s linear infinite}
+.scene .shimmer{animation:shim 3s ease-in-out infinite alternate}
+.scene .steam{animation:steam 3s ease-in-out infinite}
+@keyframes drift{to{transform:translateX(30px)}}
+@keyframes fly{from{transform:translate(0,4px)}to{transform:translate(40px,-10px)}}
+@keyframes cable{from{transform:translate(0,0)}to{transform:translate(90px,-42px)}}
+@keyframes rise{from{transform:translateY(16px)}to{transform:translateY(-4px)}}
+@keyframes glow{from{opacity:.45}to{opacity:1}}
+@keyframes bob{50%{transform:translateY(-1.5px)}}
+@keyframes chug{to{transform:translateX(40px)}}
+@keyframes shim{from{opacity:.3}to{opacity:.9}}
+@keyframes steam{0%{opacity:0;transform:translateY(6px)}50%{opacity:.8}100%{opacity:0;transform:translateY(-10px)}}
+
+/* ---------- LAPTOP ---------- */
+@media (min-width:960px){
+  .journey{grid-template-columns:minmax(360px,42%) 1fr;gap:32px;max-width:1240px;margin:0 auto;padding:0 20px}
+  .panel{top:calc(env(safe-area-inset-top,0px) + 16px);height:calc(100vh - 32px - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));margin-top:16px;border:1px solid var(--line);border-radius:22px;display:flex;flex-direction:column;overflow:hidden;background:var(--surface);align-self:start}
+  .chips{flex-wrap:wrap;overflow:visible}
+  .mapbox,.panel.mini .mapbox{flex:1;height:auto}
+  #togglemap{display:none}
+  .days{padding:8px 0 60px}
+  .card{grid-template-columns:150px 1fr;padding:12px;gap:16px}
+  .tips3{grid-template-columns:repeat(3,1fr)}
+  .two{grid-template-columns:1fr 1fr}
+  .wrap{padding:0 20px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .sig text{stroke-dashoffset:0;fill:var(--ink)} .sig path{stroke-dashoffset:0}
+}
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="hero-top">
+    <div class="brand">Chaitanya N's trip</div>
+    <div style="display:flex;gap:8px">
+      <button class="iconbtn" id="themebtn" aria-label="Switch light or dark theme">🌗</button>
+      <button class="iconbtn" id="sharebtn">Share</button>
+    </div>
+  </div>
+  <div class="hero-copy">
+    <h1><span>Sikkim +</span><span>Darjeeling</span></h1>
+    <p class="planname" id="planname">Plan A: East Sikkim + Nathula</p>
+    <p class="sub" id="herosub">Five days, 7–11 November 2026. From Bengaluru up to 14,450 ft at Nathula and back down to a Tiger Hill sunrise.</p>
+    <div class="count" id="count" aria-live="polite"></div>
+    <div class="ctas">
+      <a class="btn primary" href="#journey">Start the journey</a>
+      <a class="btn ghost" href="#packing">Packing list</a>
+    </div>
+    <div class="live" id="livebar" hidden><span class="pulse"></span><span id="livetext"></span></div>
+  </div>
+  <div class="ridgebox" id="ridgebox">
+    <svg class="ridge" id="ridge" viewBox="0 0 1200 400" preserveAspectRatio="none" aria-label="Elevation outline of the trip"></svg>
+    <div class="ridge-cap">The skyline is your trip's elevation</div>
+  </div>
+</header>
+
+<svg class="flags" viewBox="0 0 1200 46" preserveAspectRatio="none" id="flags0" aria-hidden="true"></svg>
+
+<main id="journey" class="journey">
+  <aside class="panel" id="panel">
+    <nav class="chips" id="chips" aria-label="Jump to day"></nav>
+    <div class="mapbox">
+      <svg class="map" id="map" viewBox="0 0 400 468" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Route map of Sikkim and Darjeeling with real district borders"></svg>
+      <span class="mapnote">Real borders; routes simplified</span>
+    </div>
+    <div class="nowline"><span>Viewing <b id="nowstop">Bengaluru flight</b></span><button class="linkbtn" id="togglemap" aria-expanded="true">Hide map</button></div>
+  </aside>
+  <div class="days" id="days"></div>
+</main>
+
+<div class="wrap">
+  <section class="block alt" id="altitude">
+    <h2>How high you'll go</h2>
+    <p class="lede" id="altlede">Tap any point. Day 2 takes you from about 5,400 ft to 14,450 ft and back in one day, so pace yourself above the shaded line.</p>
+    <div class="chartcard">
+      <svg id="altchart" viewBox="0 0 760 300" role="img" aria-label="Altitude chart"></svg>
+      <div class="alttip" id="alttip"></div>
+    </div>
+    <div class="tips3">
+      <div><b>Go slow up high.</b> Walk, don't run, at the high stops. Short visits are the plan anyway.</div>
+      <div><b>Hydrate and keep warm.</b> Sip water through the climb. Wind at the pass makes it feel much colder.</div>
+      <div><b>Know the signs.</b> Headache, dizziness or breathlessness that gets worse means head down and tell your driver.</div>
+    </div>
+  </section>
+
+  <section class="block" id="permits">
+    <h2>Permits, sorted</h2>
+    <p class="lede" id="permitlede">Only 8 November needs real preparation. Your registered local agency or cab operator applies for the protected-area and Nathula permits, at least one day before.</p>
+    <div class="two">
+      <div class="list" id="permitlist"></div>
+      <div>
+        <div class="list">
+          <h3 id="docstitle" style="font-size:20px;margin:12px 0 2px">Hand to the agency on 7 Nov</h3>
+          <div id="doclist"></div>
+        </div>
+        <p class="fineprint" id="permitfine">Nathula is open to Indian nationals only, and the current guidance lists Monday as the no-visit day. 8 Nov 2026 is a Sunday. Photography is prohibited at the pass itself, so follow what security personnel say.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="packing">
+    <h2>Packing checklist</h2>
+    <p class="lede">November means mild afternoons in Gangtok, possible snow at Nathula and near-freezing pre-dawn at Tiger Hill. Ticks are saved on this device.</p>
+    <div class="list" style="padding:16px">
+      <div class="packhead">
+        <svg class="ring" viewBox="0 0 64 64" aria-hidden="true"><circle class="bgc" cx="32" cy="32" r="26"/><circle class="fg" id="ringfg" cx="32" cy="32" r="26" stroke-dasharray="163.4" stroke-dashoffset="163.4"/><text x="32" y="37" text-anchor="middle" id="ringtxt">0%</text></svg>
+        <div><b id="packcount" style="font-family:var(--display);font-size:20px">0 of 0 packed</b><br><button class="linkbtn" id="packreset">Clear all ticks</button></div>
+      </div>
+      <div class="cats" id="cats"></div>
+      <div id="packlist"></div>
+    </div>
+  </section>
+
+  <section class="block" id="brief">
+    <h2>Brief for the cab operator</h2>
+    <p class="lede">Send this as-is. Also ask them to confirm road conditions the day before each long drive.</p>
+    <div class="brief">
+      <blockquote id="brieftext">We are staying in Gangtok on 7th, 8th and 9th. On 8th we need the complete Tsomgo Lake–Baba Mandir–Nathula circuit with all required permits. On 9th we want Gangtok–Ravangla–Namchi–Temi–Gangtok, keeping the stops short. On 10th we need to leave Gangtok by 6 AM and reach Darjeeling around 11 AM.</blockquote>
+      <div class="ctas">
+        <button class="btn" id="copybrief">Copy message</button>
+        <a class="btn alt2" id="wabrief" target="_blank" rel="noopener">Send on WhatsApp</a>
+      </div>
+    </div>
+    <p class="fineprint">Timings are planning estimates. Mountain roads, weather and permit rules can change, so reconfirm with your operator and the Sikkim Tourism & Civil Aviation Department before you travel.</p>
+  </section>
+</div>
+
+<footer>
+  <svg class="sig" id="sig" viewBox="0 0 420 130" aria-label="Made by Chaitanya N">
+    <text x="210" y="88" text-anchor="middle">Chaitanya N</text>
+    <path d="M70 108 C150 98 260 100 350 106"/>
+  </svg>
+  <p>Planned and made by Chaitanya N</p>
+  <p><a href="#top">Back to the top</a></p>
+</footer>
+
+<div class="planswitch" role="radiogroup" aria-label="Choose itinerary plan">
+  <button role="radio" data-plan="A" aria-checked="true"><b>Plan A</b><small>East Sikkim + Nathula</small></button>
+  <button role="radio" data-plan="B" aria-checked="false"><b>Plan B</b><small>North Sikkim + Pelling</small></button>
+</div>
+<div class="sheetbg" id="sheetbg"></div>
+<div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="gtitle"><div class="hero2" id="ghero"><button class="closex" id="gclose" aria-label="Close gallery">✕</button><h3 id="gtitle"></h3></div><div class="in"><p id="gdesc" style="margin:0 0 12px;color:var(--muted)"></p><div class="gstrip" id="gstrip"></div><h4 style="font-family:var(--display);font-size:18px;margin:0 0 10px">Real photos, live from the web</h4><div class="srcs" id="gsrcs"></div><p class="fineprint" style="margin-top:12px">Each link opens the latest photos people have posted of this exact spot.</p></div></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s);
+const store={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+function toast(t){const el=$("#toast");el.textContent=t;el.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(()=>el.classList.remove("show"),2200)}
+
+/* ---------- theme ---------- */
+const th=store.get("theme",null); if(th) document.documentElement.dataset.theme=th;
+$("#themebtn").onclick=()=>{
+  const cur=document.documentElement.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light");
+  const nx=cur==="dark"?"light":"dark";document.documentElement.dataset.theme=nx;store.set("theme",nx);
+};
+$("#sharebtn").onclick=async()=>{
+  const data={title:"Sikkim + Darjeeling trip, 7–11 Nov 2026",text:"Our Sikkim + Darjeeling itinerary",url:location.href};
+  try{ if(navigator.share){await navigator.share(data);return} await navigator.clipboard.writeText(location.href);toast("Link copied")}catch(e){}
+};
+
+/* ---------- seeded random + scene painter ---------- */
+function rng(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+let SID=0;
+function ridge(r,base,amp,step,fill,snow){
+  let pts=[],x=0;while(x<=340){pts.push([x,base-r()*amp]);x+=step*(0.6+r()*0.8)}
+  let d="M-10 190 L-10 "+pts[0][1].toFixed(1);pts.forEach(p=>d+=" L"+p[0].toFixed(1)+" "+p[1].toFixed(1));d+=" L340 190 Z";
+  let s='<path d="'+d+'" fill="'+fill+'"/>';
+  if(snow){pts.forEach((p,i)=>{if(i&&i<pts.length-1&&p[1]<pts[i-1][1]&&p[1]<pts[i+1][1]&&p[1]<base-amp*0.55){const w=10+r()*8;s+='<path d="M'+(p[0]-w)+' '+(p[1]+w*0.9)+' L'+p[0]+' '+p[1]+' L'+(p[0]+w)+' '+(p[1]+w*0.9)+' L'+(p[0]+w*0.4)+' '+(p[1]+w*0.6)+' L'+p[0]+' '+(p[1]+w)+' L'+(p[0]-w*0.4)+' '+(p[1]+w*0.6)+'Z" fill="'+snow+'"/>'}})}
+  return s;
+}
+function flagsSVG(x1,y1,x2,y2,n,sag){
+  const cols=["#2F6DB5","#F4F4F4","#C8423B","#2E8B57","#E8B12F"];let s='<path d="M'+x1+' '+y1+' Q'+((x1+x2)/2)+' '+(Math.max(y1,y2)+sag)+' '+x2+' '+y2+'" stroke="#6b5a48" stroke-width="0.8" fill="none"/>';
+  for(let i=1;i<n;i++){const t=i/n,x=(1-t)*(1-t)*x1+2*(1-t)*t*((x1+x2)/2)+t*t*x2,y=(1-t)*(1-t)*y1+2*(1-t)*t*(Math.max(y1,y2)+sag)+t*t*y2;s+='<rect x="'+(x-3)+'" y="'+y+'" width="6" height="8" fill="'+cols[i%5]+'"/>'}
+  return s;
+}
+function sky(a,b){const id="g"+(++SID);return{def:'<linearGradient id="'+id+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+a+'"/><stop offset="1" stop-color="'+b+'"/></linearGradient>',fill:'url(#'+id+')'}}
+function stars(r,n){let s="";for(let i=0;i<n;i++)s+='<circle cx="'+(r()*320).toFixed(1)+'" cy="'+(r()*70).toFixed(1)+'" r="'+(r()*1.1+.3).toFixed(2)+'" fill="#fff" opacity="'+(r()*.6+.3).toFixed(2)+'"/>';return s}
+function houses(r,y0,night,n){let s="";for(let i=0;i<n;i++){const x=r()*300,y=y0+r()*40,w=12+r()*14,h=10+r()*12,c=["#E9E2D3","#D7E3EE","#F0D7C2","#CFE0CF"][i%4];s+='<rect x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+w.toFixed(1)+'" height="'+h.toFixed(1)+'" fill="'+(night?"#2c3f63":c)+'"/><path d="M'+(x-2)+' '+y+' L'+(x+w/2)+' '+(y-6)+' L'+(x+w+2)+' '+y+'Z" fill="'+(night?"#22314f":["#B23A3A","#2F6DB5","#2E8B57"][i%3])+'"/>';if(night&&r()>.3)s+='<rect class="glow" x="'+(x+3)+'" y="'+(y+3)+'" width="4" height="4" fill="#FFD27A"/>'}return s}
+
+function scene(type,seed){
+  const r=rng(seed*977+13);let defs="",body="";const S=(a,b)=>{const k=sky(a,b);defs+=k.def;return k.fill};
+  switch(type){
+  case "flight":{body+='<rect width="320" height="180" fill="'+S("#7FB2E5","#E6F1FB")+'"/>';
+    for(let i=0;i<4;i++){const x=r()*280,y=20+r()*90;body+='<g class="cloud"><ellipse cx="'+x+'" cy="'+y+'" rx="'+(26+r()*20)+'" ry="9" fill="#fff" opacity=".9"/><ellipse cx="'+(x+14)+'" cy="'+(y-6)+'" rx="16" ry="9" fill="#fff"/></g>'}
+    body+=ridge(r,170,30,24,"#9DB7CF");body+='<g class="plane"><path d="M100 92 l60 -6 l16 -12 l6 0 l-8 14 l30 -3 l8 -8 l5 0 l-4 10 l4 10 l-5 0 l-8 -7 l-30 -2 l8 14 l-6 0 l-16 -12 l-60 -5 z" fill="#fff" stroke="#172A46" stroke-width="1.2"/></g>';break}
+  case "road":{body+='<rect width="320" height="180" fill="'+S("#A8CDEE","#F0F6FB")+'"/>'+ridge(r,80,40,22,"#9FB3C9",null)+ridge(r,115,35,26,"#5E8C6A")+ridge(r,145,25,30,"#3F6F4E");
+    body+='<path d="M-10 172 C60 160 110 182 180 168 S300 160 340 170" stroke="#4E9CC9" stroke-width="7" fill="none"/>';
+    body+='<path d="M330 120 C260 128 230 138 170 140 S60 150 -10 156" stroke="#5c5c5c" stroke-width="9" fill="none"/><path d="M330 120 C260 128 230 138 170 140 S60 150 -10 156" stroke="#fff" stroke-width="1" stroke-dasharray="6 6" fill="none"/>';
+    body+='<g class="cab"><rect x="150" y="128" width="26" height="11" rx="3" fill="#E8B12F"/><rect x="155" y="123" width="15" height="7" rx="2" fill="#E8B12F"/><circle cx="156" cy="140" r="3" fill="#222"/><circle cx="171" cy="140" r="3" fill="#222"/></g>';break}
+  case "town":case "townnight":{const n=type==="townnight";body+='<rect width="320" height="180" fill="'+(n?S("#16274a","#3E5A8A"):S("#9CC6EE","#EEF5FB"))+'"/>'+(n?stars(r,40):"")+ridge(r,70,35,22,n?"#2a3d62":"#B9C9DA","#fff")+ridge(r,110,30,26,n?"#1f3052":"#6E9878")+houses(r,104,n,16)+ridge(r,168,14,40,n?"#182640":"#4C7A58");break}
+  case "ropeway":{body+='<rect width="320" height="180" fill="'+S("#F3B27A","#FCE7CF")+'"/>'+ridge(r,80,40,20,"#C79A8A","#fff")+ridge(r,120,30,26,"#7E6E85")+houses(r,128,false,10);
+    body+='<line x1="10" y1="150" x2="320" y2="20" stroke="#333" stroke-width="1.2"/><line x1="10" y1="154" x2="320" y2="24" stroke="#333" stroke-width=".8"/><rect x="40" y="128" width="5" height="40" fill="#555"/>';
+    body+='<g class="cabin"><line x1="108" y1="110" x2="108" y2="120" stroke="#333"/><rect x="96" y="120" width="24" height="18" rx="3" fill="#C8423B"/><rect x="100" y="124" width="7" height="6" fill="#FFE4B0"/><rect x="110" y="124" width="7" height="6" fill="#FFE4B0"/></g>';break}
+  case "street":{body+='<rect width="320" height="180" fill="'+S("#1B2B4E","#47618F")+'"/>'+stars(r,30);
+    for(let i=0;i<8;i++){const x=i*42-5,h=60+r()*40;body+='<rect x="'+x+'" y="'+(170-h)+'" width="40" height="'+h+'" fill="'+["#E3D7C3","#C9D8E6","#E8C9B8","#CFE0CF"][i%4]+'"/>';for(let j=0;j<3;j++)body+='<rect class="glow" x="'+(x+6+j*11)+'" y="'+(180-h)+'" width="7" height="9" fill="#FFD27A" opacity=".85"/>'}
+    body+=flagsSVG(0,40,320,46,22,22);
+    for(let i=0;i<4;i++){const x=30+i*85;body+='<rect x="'+x+'" y="118" width="3" height="52" fill="#2b2b2b"/><circle class="glow" cx="'+(x+1.5)+'" cy="116" r="10" fill="#FFD27A" opacity=".5"/><circle cx="'+(x+1.5)+'" cy="116" r="4" fill="#FFF3C9"/>'}
+    body+='<rect y="168" width="320" height="12" fill="#6b6f78"/>';break}
+  case "peaks":{body+='<rect width="320" height="180" fill="'+S("#5C9BD8","#DCEBF8")+'"/>'+ridge(r,80,60,18,"#8EA6C1","#fff")+ridge(r,130,50,22,"#5D7593","#F4F8FC")+ridge(r,170,30,30,"#3E5A44");break}
+  case "lake":{body+='<rect width="320" height="180" fill="'+S("#5E9EDC","#E2EFFA")+'"/>'+ridge(r,70,50,18,"#9AB1CB","#fff")+ridge(r,110,45,22,"#6B819E","#fff");
+    body+='<ellipse cx="160" cy="140" rx="150" ry="26" fill="#6FB0D6"/><ellipse cx="160" cy="138" rx="120" ry="16" fill="#9BD0EC" class="shimmer"/>';
+    for(let i=0;i<5;i++)body+='<line class="shimmer" x1="'+(70+i*40)+'" y1="'+(132+i%2*8)+'" x2="'+(100+i*40)+'" y2="'+(132+i%2*8)+'" stroke="#fff" stroke-width="1.5"/>';
+    body+='<path d="M0 160 C60 150 100 172 160 168 S280 152 320 162 L320 180 L0 180Z" fill="#F7FAFD"/>';break}
+  case "shrine":{body+='<rect width="320" height="180" fill="'+S("#6AA5DD","#E4F0FA")+'"/>'+ridge(r,80,50,20,"#97AEC8","#fff")+ridge(r,140,30,30,"#7D8E6B");
+    body+='<rect x="120" y="110" width="80" height="44" fill="#F3E3C3"/><path d="M110 112 L160 84 L210 112Z" fill="#B23A3A"/><path d="M128 92 L160 72 L192 92Z" fill="#E8B12F"/><rect x="150" y="128" width="20" height="26" fill="#7a3b2a"/><rect y="154" width="320" height="26" fill="#EEF2F6"/>';
+    body+=flagsSVG(0,60,118,108,10,14)+flagsSVG(202,108,320,60,10,14);break}
+  case "pass":{body+='<rect width="320" height="180" fill="'+S("#3E7EC7","#D6E8F8")+'"/>'+ridge(r,60,50,16,"#8CA4C2","#fff")+ridge(r,100,50,20,"#61789A","#fff");
+    body+='<path d="M0 130 C80 120 220 124 320 132 L320 180 L0 180Z" fill="#F7FAFD"/>';
+    body+='<rect x="96" y="96" width="12" height="54" fill="#7a5a44"/><rect x="212" y="96" width="12" height="54" fill="#7a5a44"/><rect x="88" y="86" width="144" height="14" fill="#B23A3A"/><path d="M84 86 L160 66 L236 86Z" fill="#E8B12F"/>';
+    body+='<line x1="270" y1="70" x2="270" y2="150" stroke="#555" stroke-width="2"/><rect x="271" y="72" width="26" height="6" fill="#FF9933"/><rect x="271" y="78" width="26" height="6" fill="#fff"/><rect x="271" y="84" width="26" height="6" fill="#138808"/><circle cx="284" cy="81" r="2" fill="#000080"/>';
+    body+=flagsSVG(0,50,90,90,8,12);break}
+  case "buddha":{body+='<rect width="320" height="180" fill="'+S("#7CB3E6","#EAF4FC")+'"/>'+ridge(r,70,40,20,"#A8BCD2","#fff")+ridge(r,140,30,30,"#6B9A62");
+    body+='<rect x="120" y="140" width="80" height="16" fill="#D9C9A3"/><rect x="130" y="132" width="60" height="10" fill="#E6D8B5"/>';
+    body+='<ellipse cx="160" cy="124" rx="34" ry="12" fill="#E2A93B"/><path d="M134 124 C134 90 186 90 186 124Z" fill="#E8B12F"/><circle cx="160" cy="84" r="12" fill="#E8B12F"/><circle cx="160" cy="72" r="5" fill="#D99A1E"/><ellipse cx="160" cy="84" rx="20" ry="22" fill="none" stroke="#FFE7A3" stroke-width="2" class="glow"/>';
+    body+='<rect y="156" width="320" height="24" fill="#5C8C55"/>';break}
+  case "chardham":{body+='<rect width="320" height="180" fill="'+S("#8FC0EA","#F1F7FC")+'"/>'+ridge(r,90,40,24,"#AFC2D6")+ridge(r,150,24,32,"#729A6A");
+    [[80,40,"#E8E0D0"],[130,62,"#F2EAD9"],[190,48,"#E8E0D0"],[240,36,"#F2EAD9"]].forEach(([x,h,c])=>{body+='<rect x="'+(x-14)+'" y="'+(148-20)+'" width="28" height="20" fill="'+c+'"/><path d="M'+(x-13)+' 128 C'+(x-10)+' '+(128-h*0.6)+' '+(x-4)+' '+(128-h)+' '+x+' '+(128-h-6)+' C'+(x+4)+' '+(128-h)+' '+(x+10)+' '+(128-h*0.6)+' '+(x+13)+' 128Z" fill="'+c+'" stroke="#C9B48E"/><line x1="'+x+'" y1="'+(128-h-6)+'" x2="'+x+'" y2="'+(128-h-18)+'" stroke="#B23A3A"/><path d="M'+x+' '+(128-h-18)+' l9 3 l-9 3z" fill="#E0702F"/>'});
+    body+='<rect y="148" width="320" height="32" fill="#6B8F62"/>';break}
+  case "tea":{body+='<rect width="320" height="180" fill="'+S("#9CCBF0","#F2F8FC")+'"/>'+ridge(r,60,30,24,"#B7C8DA","#fff");
+    body+='<path d="M-10 90 C80 70 200 80 330 70 L330 180 L-10 180Z" fill="#7DB36A"/>';
+    for(let i=0;i<9;i++){const y=96+i*10;body+='<path d="M-10 '+y+' C80 '+(y-14+i*1.2)+' 200 '+(y-4)+' 330 '+(y-12+i)+'" stroke="'+(i%2?"#3E8A45":"#2F6F3A")+'" stroke-width="6" fill="none" stroke-linecap="round"/>'}
+    body+='<g><circle cx="250" cy="80" r="5" fill="#C8423B"/><path d="M244 98 L250 84 L256 98Z" fill="#E8B12F"/></g>';break}
+  case "sunrise":{body+='<rect width="320" height="180" fill="'+S("#2B2F63","#F6A15F")+'"/><circle class="sun" cx="160" cy="112" r="22" fill="#FFD27A"/><circle class="sun glow" cx="160" cy="112" r="40" fill="#FFD27A" opacity=".3"/>';
+    body+=ridge(r,95,55,18,"#4A4E86","#F7B8A0")+ridge(r,140,28,24,"#2C2F5C")+ridge(r,170,18,30,"#1C1F42");break}
+  case "loop":{body+='<rect width="320" height="180" fill="'+S("#A9CDEB","#F1F7FC")+'"/>'+ridge(r,70,40,20,"#A9BCD2","#fff")+ridge(r,110,26,26,"#6D9A72");
+    body+='<ellipse cx="160" cy="140" rx="120" ry="28" fill="#8FC07E" stroke="#6b5a48" stroke-width="3"/><ellipse cx="160" cy="140" rx="112" ry="22" fill="#9ACB8A"/>';
+    body+='<path d="M154 140 L160 92 L166 140Z" fill="#EDEDED" stroke="#aaa"/><rect x="146" y="138" width="28" height="6" fill="#ccc"/>';
+    body+='<g class="train"><rect x="40" y="160" width="20" height="10" rx="2" fill="#2F6DB5"/><rect x="62" y="161" width="16" height="9" rx="2" fill="#C8423B"/><rect x="80" y="161" width="16" height="9" rx="2" fill="#C8423B"/><circle cx="46" cy="156" r="3" fill="#ccc" class="steam"/></g>';break}
+  case "lunch":{body+='<rect width="320" height="180" fill="'+S("#F4D9B8","#FBF1E4")+'"/><rect y="118" width="320" height="62" fill="#B4835A"/><ellipse cx="160" cy="128" rx="82" ry="20" fill="#fff"/><ellipse cx="160" cy="124" rx="70" ry="14" fill="#F2EEE6"/>';
+    [[130,118],[160,114],[190,118],[145,128],[175,128]].forEach(([x,y])=>body+='<path d="M'+(x-13)+' '+(y+6)+' C'+(x-13)+' '+(y-8)+' '+(x+13)+' '+(y-8)+' '+(x+13)+' '+(y+6)+'Z" fill="#FFF8EC" stroke="#E3D6C1"/><path d="M'+(x-4)+' '+(y-3)+' Q'+x+' '+(y-9)+' '+(x+4)+' '+(y-3)+'" stroke="#E3D6C1" fill="none"/>');
+    for(let i=0;i<3;i++)body+='<path class="steam" style="animation-delay:'+i*.8+'s" d="M'+(140+i*20)+' 96 q-6 -10 0 -20 q6 -10 0 -20" stroke="#fff" stroke-width="3" fill="none" opacity=".8"/>';break}
+  case "village":{body+='<rect width="320" height="180" fill="'+S("#21365e","#5A78A8")+'"/>'+stars(r,30)+ridge(r,60,40,18,"#3B5179","#E8EEF6");
+    body+='<path d="M-10 180 L-10 26 L135 180Z" fill="#2B4469"/><path d="M330 180 L330 34 L185 180Z" fill="#26405f"/>';
+    for(let i=0;i<7;i++){const x=95+i*19,y=128+(i%3)*9;body+='<rect x="'+x+'" y="'+y+'" width="16" height="12" fill="#5d4a3a"/><path d="M'+(x-2)+' '+y+' L'+(x+8)+' '+(y-7)+' L'+(x+18)+' '+y+'Z" fill="#8B3A3A"/><rect class="glow" x="'+(x+5)+'" y="'+(y+3)+'" width="5" height="5" fill="#FFD27A"/>'}
+    body+='<path d="M150 180 C140 168 175 160 160 150" stroke="#7FB8DA" stroke-width="5" fill="none" opacity=".8"/>';break}
+  case "valley":{body+='<rect width="320" height="180" fill="'+S("#5E9EDC","#E2EFFA")+'"/>'+ridge(r,70,50,18,"#9AB1CB","#fff")+ridge(r,105,40,22,"#6B819E","#fff");
+    body+='<path d="M-10 122 C80 112 240 116 330 120 L330 180 L-10 180Z" fill="#B59B5E"/><path d="M-10 150 C60 140 140 150 330 140 L330 180 L-10 180Z" fill="#A08648"/>';
+    body+='<path class="shimmer" d="M40 180 C80 160 60 145 130 138 S240 132 300 124" stroke="#8FD0EE" stroke-width="5" fill="none"/>';
+    [[200,150],[226,156],[90,160]].forEach(([x,y])=>body+='<ellipse cx="'+x+'" cy="'+y+'" rx="9" ry="5" fill="#2b2b2b"/><circle cx="'+(x+9)+'" cy="'+(y-2)+'" r="3" fill="#2b2b2b"/><rect x="'+(x-6)+'" y="'+(y+3)+'" width="2" height="5" fill="#2b2b2b"/><rect x="'+(x+4)+'" y="'+(y+3)+'" width="2" height="5" fill="#2b2b2b"/>');break}
+  case "snowfield":{body+='<rect width="320" height="180" fill="'+S("#2F6FBD","#D6E8F8")+'"/>'+ridge(r,55,45,16,"#8CA4C2","#fff")+ridge(r,95,40,20,"#A9BDD5","#fff");
+    body+='<path d="M0 118 C80 108 220 112 320 120 L320 180 L0 180Z" fill="#FAFCFE"/><path d="M0 150 C100 140 220 150 320 146" stroke="#DCE6F0" stroke-width="2" fill="none"/>';
+    body+='<rect x="230" y="100" width="3" height="40" fill="#555"/><rect x="214" y="92" width="36" height="16" rx="2" fill="#E8B12F"/>';
+    body+='<g class="cab"><rect x="70" y="140" width="34" height="14" rx="3" fill="#C8423B"/><rect x="76" y="132" width="20" height="10" rx="2" fill="#C8423B"/><rect x="79" y="134" width="7" height="6" fill="#cfe6f7"/><circle cx="78" cy="156" r="4" fill="#222"/><circle cx="98" cy="156" r="4" fill="#222"/></g>'+flagsSVG(0,60,110,96,9,12);break}
+  case "pelling":{body+='<rect width="320" height="180" fill="'+S("#F4B98C","#FDEBD8")+'"/>';
+    body+='<path d="M20 120 L90 60 L120 72 L160 30 L200 64 L230 52 L300 120Z" fill="#F7EEF2"/><path d="M160 30 L176 52 L168 50 L160 62 L150 50Z" fill="#fff"/><path d="M90 60 L120 72 L160 30 L200 64 L230 52 L230 60 L200 72 L160 44 L120 82 L90 68Z" fill="#E7D3DF"/>';
+    body+=ridge(r,128,22,26,"#7C8DA8")+'<path d="M-10 180 L-10 140 C60 128 140 134 200 146 S300 150 330 144 L330 180Z" fill="#4C7A58"/>';
+    body+='<rect x="236" y="128" width="40" height="22" fill="#F3E3C3"/><path d="M230 130 L256 114 L282 130Z" fill="#B23A3A"/><path d="M244 118 L256 106 L268 118Z" fill="#E8B12F"/>'+flagsSVG(170,120,232,132,6,8);break}
+  }
+  return '<svg class="scene" viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs>'+defs+'</defs>'+body+'</svg>';
+}
+
+/* ---------- shared helpers ---------- */
+const P={none:"No permit",pap:"Protected-area permit",nathula:"Nathula permit",ticket:"Entry ticket"};
+const DATES={1:"2026-11-07",2:"2026-11-08",3:"2026-11-09",4:"2026-11-10",5:"2026-11-11"};
+function fmt(t){let[h,m]=t.split(":").map(Number);const ap=h>=12?"PM":"AM";h=h%12||12;return h+":"+String(m).padStart(2,"0")+" "+ap}
+const mk=(pre,arr)=>arr.map((a,i)=>({id:pre+i,day:a[0],t:a[1],title:a[2],scene:a[3],wp:a[4],permit:a[5],dur:a[6],short:a[7],det:a[8],q:a[9],star:!!a[10],opt:!!a[11],ts:Date.parse(DATES[a[0]]+"T"+a[1]+":00+05:30")}));
+const darjDay=(w)=>[
+ [4,"14:30","Explore Darjeeling","street",w,"none","4 h","Your relaxed afternoon in the hills.",["Chowrasta","Mall Road","Observatory Hill","Cafés and shopping"],"Chowrasta Mall Road Darjeeling"],
+ [4,"19:00","Dinner and early sleep","townnight",w,"none","1.5 h","Tomorrow starts at 4:30 AM.",[],"Darjeeling night"]];
+const lastDay=(w)=>[
+ [5,"04:30","Tiger Hill sunrise","sunrise",w,"ticket","~1.5 h","Sunrise lighting up the Himalayan range, Kanchenjunga included on a clear day.",["Dress for near-freezing pre-dawn","Carry a torch"],"Tiger Hill sunrise Kanchenjunga",true],
+ [5,"06:30","Batasia Loop","loop",w+1,"ticket","30 min","The toy train's spiral loop with mountain views.",[],"Batasia Loop Darjeeling"],
+ [5,"07:30","Breakfast and checkout","town",w+2,"none","45 min","Back to the hotel, eat, collect luggage.",[],"Darjeeling hotel view"],
+ [5,"08:15","Drive to Bagdogra","road",w+2.6,"none","~3 h","Allow extra for traffic.",[],"Darjeeling to Siliguri road"],
+ [5,"11:30","Arrive Bagdogra","flight",w+3,"none","Buffer","A comfortable cushion before the afternoon flight.",[],"Bagdogra airport"],
+ [5,"13:20","Flight to Bengaluru","flight",w+3,"none","Home","End of the trip.",[],"Bagdogra airport flight"]];
+const flight=[1,"05:30","Flight to Bagdogra","flight",0,"none","~4.5 h","Early flight. Land around 10:00 and allow 30 minutes for bags.",["Bagdogra is in West Bengal, so no permit is needed here.","Keep ID and permit documents in your cabin bag."],"Bagdogra airport"];
+const day5={n:5,date:"Wed 11 Nov",title:"Tiger Hill dawn and home",route:"Tiger Hill → Batasia Loop → Bagdogra ✈️ Bengaluru",c:"var(--orange)",note:"Very early start. Pack the night before."};
+const gmTail=["Tiger Hill, Darjeeling","Bagdogra Airport",["Batasia Loop"]];
+const commonDocs=[["Two passport-size photos","Per person, for the permit application"],["Photocopies of the ID","Carry a couple of spares"]];
+
+const PLANS={
+A:{key:"A",name:"Plan A",tag:"East Sikkim + Nathula",
+ sub:"Five days, 7–11 November 2026. From Bengaluru up to 14,450 ft at Nathula and back down to a Tiger Hill sunrise.",
+ days:[
+  {n:1,date:"Sat 7 Nov",title:"Bengaluru to Gangtok",route:"Bengaluru ✈️ Bagdogra 🚕 Gangtok",c:"var(--yellow)",note:"Arrival day. Keep the afternoon light: you've flown and driven several hours."},
+  {n:2,date:"Sun 8 Nov",title:"Tsomgo, Baba Mandir, Nathula",route:"Gangtok → Tsomgo Lake → Baba Mandir → Nathula → Gangtok",c:"var(--blue)",note:"The big high-altitude day. Permits must be in hand: your agency applies a day ahead."},
+  {n:3,date:"Mon 9 Nov",title:"South Sikkim scenic loop",route:"Gangtok → Ravangla → Namchi → Temi → Gangtok",c:"var(--green)",note:"A long road day with short, controlled stops. Ask the driver to confirm road conditions on the 8th."},
+  {n:4,date:"Tue 10 Nov",title:"Gangtok to Darjeeling",route:"Gangtok 🚕 Darjeeling",c:"var(--red)",note:"Leave at 6 AM to land in Darjeeling around 11. The Darjeeling plan stays exactly as you set it."},day5],
+ gm:{1:["Bagdogra Airport","MG Marg, Gangtok",[]],2:["Gangtok","Gangtok",["Tsomgo Lake","Baba Harbhajan Singh Mandir","Nathula Pass"]],3:["Gangtok","Gangtok",["Buddha Park, Ravangla","Char Dham, Namchi","Temi Tea Garden"]],4:["Gangtok","Chowrasta, Darjeeling",[]],5:gmTail},
+ wpn:["Bagdogra","Gangtok","Tsomgo","Baba","Nathula","Gangtok","Ravangla","Namchi","Temi","Gangtok","Darjeeling","Tiger Hill","Batasia","Darjeeling","Bagdogra"],
+ view:[0,197,400,468],
+ stops:mk("a",[flight,
+  [1,"10:30","Drive to Gangtok","road",1,"none","4–5 h","Meet your pre-booked cab. The road follows the Teesta valley into Sikkim.",["Scenic drive through river valley and mountain terrain.","No tourist permit needed for Indian citizens visiting Gangtok."],"Teesta valley road Sikkim"],
+  [1,"15:30","Check in at Gangtok","town",1,"none","Break","Check into the hostel, freshen up and rest. Don't over-plan this afternoon.",["Ask the cab operator to collect documents for tomorrow's permits tonight."],"Gangtok town view"],
+  [1,"16:30","Gangtok Ropeway","ropeway",1,"ticket","30–45 min","First stop if you're on time and it's running: an aerial view over Gangtok.",["Normal attraction ticket applies.","A gentle start without another long drive."],"Gangtok ropeway"],
+  [1,"17:30","Evening on MG Marg","street",1,"none","Open","Gangtok's pedestrian main street. Walk, browse, eat, take photos.",["Local shops and cafés","Street photography","Try local food"],"MG Marg Gangtok night"],
+  [1,"19:30","Dinner near MG Marg","townnight",1,"none","1.5 h","Eat and turn in early. Tomorrow is the big altitude day.",[],"MG Marg Gangtok restaurants"],
+  [2,"06:30","Leave Gangtok","road",1,"pap","Early","Quick breakfast or carry something. Cab and permits arranged the day before.",["Protected-area permit required for this circuit, handled by your registered agency."],"Jawaharlal Nehru Road Gangtok Nathula"],
+  [2,"08:30","Mountain photo stops","peaks",1.6,"pap","10–15 min","Short stops only where the view really earns it.",["Don't let roadside viewpoints eat the morning."],"Gangtok to Tsomgo road snow"],
+  [2,"09:15","Tsomgo Lake","lake",2,"pap","45–60 min","A glacial lake at about 12,400 ft. It can freeze in winter, with snow all around.",["Walk the lake edge and take photos","Snowboots or gumboots can be hired locally","Quick tea or snack if needed"],"Tsomgo lake Sikkim",true],
+  [2,"10:45","Baba Harbhajan Singh Mandir","shrine",3,"pap","30 min","Visit the shrine and take in the high-altitude landscape.",["Covered under the protected-area route permit."],"Baba Harbhajan Singh Mandir"],
+  [2,"11:45","Nathula Pass","pass",4,"nathula","45–60 min","About 14,450 ft on the historic India–Tibet route, at the India–China border.",["Indian nationals only","Permit via a registered agency only","Photography is prohibited at the pass itself: follow security instructions","Possible snow and strong wind"],"Nathula pass Sikkim",true],
+  [2,"13:00","Quick lunch","lunch",4,"none","45 min","Keep it short. Something warm helps after the pass.",[],"momos Sikkim"],
+  [2,"14:00","Descend to Gangtok","road",5,"none","~3 h","Take one or two stops only if the driver knows a great one. Reach around 4:30–5:00.",[],"Gangtok hills"],
+  [2,"18:00","Free Gangtok evening","street",5,"none","3 h","Catch anything you missed on day 1: MG Marg, a café, shopping, dinner.",[],"MG Marg Gangtok evening"],
+  [3,"06:00","Leave Gangtok","road",5,"none","Early","Packed breakfast. A long road day, so stops stay controlled.",[],"Gangtok Ravangla road"],
+  [3,"08:30","Buddha Park, Ravangla","buddha",6,"ticket","~1 h","The giant Buddha statue with Himalayan views all around.",["Walk the park","See the statue up close","Photos and a short break"],"Buddha Park Ravangla",true],
+  [3,"11:00","Char Dham, Namchi","chardham",7,"ticket","45–60 min","Optional. Visit if the group enjoys religious and cultural sites; otherwise drive on to Temi.",["Also called Siddheshwar Dham"],"Char Dham Namchi Siddheshwar Dham",false,true],
+  [3,"12:15","Temi Tea Garden","tea",8,"ticket","45–60 min","Sikkim's iconic Himalayan tea estate: something completely different from day 2.",["Walk the estate and photograph the slopes","Have tea if it's available","Valley views"],"Temi tea garden Sikkim",true],
+  [3,"13:15","Lunch","lunch",8,"none","45 min","Keep it quick.",[],"Temi tea garden cafe"],
+  [3,"14:00","Back to Gangtok","road",9,"none","3–4 h","Reach Gangtok around 5–6 PM, depending on roads.",[],"Sikkim mountain road"],
+  [3,"18:00","Last night in Gangtok","townnight",9,"none","Relaxed","MG Marg, shopping, dinner and packing for the 6 AM start.",[],"Gangtok night lights"],
+  [4,"06:00","Drive to Darjeeling","road",10,"none","4.5–5 h","Leave by 6 for buffer on mountain roads. Packed breakfast.",["You're leaving Sikkim for West Bengal: no sightseeing permit needed."],"Gangtok to Darjeeling road"],
+  [4,"11:00","Arrive, check in, lunch","town",10,"none","2 h","Check into the hotel, freshen up and eat.",[],"Darjeeling town"],
+  ...darjDay(10),...lastDay(11)]),
+ alt:[["Bengaluru",3020,"Start","Home base. Early flight out."],["Bagdogra",410,"Day 1","The plains. Your gateway in and out."],["Gangtok",5410,"Day 1","Your base for three nights. Comfortable altitude."],["Tsomgo Lake",12400,"Day 2","Glacial lake. The air is thin here: walk slowly."],["Baba Mandir",13100,"Day 2","Shrine stop on the climb. Keep sipping water."],["Nathula",14450,"Day 2","Highest point of the trip. Short visit, warm layers, no running."],["Gangtok",5410,"Day 2","Back to base altitude for the night."],["Ravangla",7000,"Day 3","Buddha Park. Pleasant and green."],["Namchi",5500,"Day 3","Char Dham, optional stop."],["Temi",5000,"Day 3","Tea estate slopes."],["Gangtok",5410,"Day 3","Last Gangtok night."],["Darjeeling",6700,"Day 4","Hill-station base for the last night."],["Tiger Hill",8480,"Day 5","Pre-dawn sunrise point. Near freezing, so dress warm."],["Bagdogra",410,"Day 5","Fly home."]],
+ ridgeLbl:[[5,"Nathula 14,450 ft"],[3,"Tsomgo"],[12,"Tiger Hill"],[2,"Gangtok"]],altPeak:5,
+ altLede:"Tap any point. Day 2 takes you from about 5,400 ft to 14,450 ft and back in one day, so pace yourself above the shaded line.",
+ permitLede:"Only 8 November needs real preparation. Your registered local agency or cab operator applies for the protected-area and Nathula permits, at least one day before.",
+ permits:[["Bagdogra → Gangtok","none","No special permit"],["Gangtok, Ropeway, MG Marg","none","Ropeway needs a normal ticket"],["Tsomgo Lake","pap","Protected-area permit"],["Baba Mandir","pap","Covered under the protected-area route"],["Nathula","nathula","Mandatory, Indian nationals only"],["Ravangla, Buddha Park","none","Normal entry if applicable"],["Namchi, Char Dham","none","Normal entry if applicable"],["Temi Tea Garden","none","No special permit"],["Gangtok → Darjeeling","none","No sightseeing permit"]],
+ docsTitle:"Hand to the agency on 7 Nov",
+ docs:[["Photo ID proving nationality","Passport, voter ID, Indian driving licence or specified government ID. Aadhaar is not accepted for this."],...commonDocs,["Submit to the agency by 7 Nov","At least one day before the 8 Nov circuit"]],
+ fine:"Nathula is open to Indian nationals only, and the current guidance lists Monday as the no-visit day. 8 Nov 2026 is a Sunday. Photography is prohibited at the pass itself, so follow what security personnel say.",
+ brief:"We are staying in Gangtok on 7th, 8th and 9th. On 8th we need the complete Tsomgo Lake–Baba Mandir–Nathula circuit with all required permits. On 9th we want Gangtok–Ravangla–Namchi–Temi–Gangtok, keeping the stops short. On 10th we need to leave Gangtok by 6 AM and reach Darjeeling around 11 AM."
+},
+B:{key:"B",name:"Plan B",tag:"North Sikkim + Pelling",
+ sub:"Five days, 7–11 November 2026. From Bengaluru up to about 15,300 ft at Zero Point, across to Pelling and down to a Tiger Hill sunrise.",
+ days:[
+  {n:1,date:"Sat 7 Nov",title:"Bagdogra to Lachung",route:"Bengaluru ✈️ Bagdogra 🚕 Lachung",c:"var(--yellow)",note:"A long first day: about 7–8 hours on the road after the flight. Your operator needs the North Sikkim permit ready before you land, and should confirm that a 7–8 PM arrival is allowed."},
+  {n:2,date:"Sun 8 Nov",title:"Yumthang, Zero Point, Gangtok",route:"Lachung → Yumthang → Zero Point → Lachung → Gangtok",c:"var(--blue)",note:"The highest and longest day: up to about 15,300 ft, then roughly 6–7 hours down to Gangtok. Zero Point can close after snow, so take your operator's call on the day."},
+  {n:3,date:"Mon 9 Nov",title:"Namchi, Ravangla, Pelling",route:"Gangtok → Namchi → Ravangla → Pelling",c:"var(--green)",note:"A gentler altitude day after the north. You end in West Sikkim, with Kanchenjunga views the next morning if it's clear."},
+  {n:4,date:"Tue 10 Nov",title:"Pelling to Darjeeling",route:"Pelling 🚕 Darjeeling",c:"var(--red)",note:"Leave by 6:30–7 AM to check in around noon. The Darjeeling afternoon stays as planned."},day5],
+ gm:{1:["Bagdogra Airport","Lachung, Sikkim",[]],2:["Lachung, Sikkim","Gangtok",["Yumthang Valley","Zero Point Yumesamdong","Lachung, Sikkim"]],3:["Gangtok","Pelling",["Char Dham, Namchi","Buddha Park, Ravangla"]],4:["Pelling","Chowrasta, Darjeeling",[]],5:gmTail},
+ wpn:["Bagdogra","~Singtam","~Mangan","~Chungthang","Lachung","Yumthang","Zero Point","Lachung","~Chungthang","~Mangan","Gangtok","Namchi","Ravangla","Pelling","Darjeeling","Tiger Hill","Batasia","Darjeeling","Bagdogra"],
+ view:[0,0,400,665],
+ stops:mk("b",[flight,
+  [1,"12:00","Drive to Lachung","road",4,"pap","7–8 h","Depart around noon, reach about 7–8 PM. The road climbs the Teesta valley into North Sikkim.",["North Sikkim protected-area permit needed, arranged in advance by your registered operator","Keep ID handy for checkpoints on the way","Buy snacks and water before leaving the plains"],"Lachung road North Sikkim"],
+  [1,"19:30","Overnight in Lachung","village",4,"pap","Night","Check in, eat a hot dinner and sleep early. You leave for Yumthang before sunrise.",["Lachung sits at about 8,600 ft","November nights are cold: layer up"],"Lachung village Sikkim"],
+  [2,"05:30","Leave for Yumthang","road",4.4,"pap","~1.5 h","Start at 5:30–6 AM and reach Yumthang around 7–7:30 AM.",["Carry breakfast or eat at a roadside stall"],"Lachung to Yumthang road"],
+  [2,"07:00","Yumthang Valley","valley",5,"pap","~1 h","A wide high valley at about 11,800 ft, with a river running through it and peaks all around.",["Walk the valley floor and riverbank","Look out for grazing yaks","Go slow: the air is thin"],"Yumthang Valley Sikkim",true],
+  [2,"08:30","Drive to Zero Point","road",5.5,"pap","~1–1.5 h","Leave around 8:30–9 AM and reach about 10 AM.",["Zero Point (Yumesamdong) usually needs an extra local permit or fee, which the operator sorts out in Lachung","The road can close after snowfall"],"Yumthang to Zero Point road"],
+  [2,"10:00","Zero Point","snowfield",6,"pap","30–60 min","About 15,300 ft, where the road ends among snowfields and peaks.",["Highest point of either plan: no running, keep it short","Heaviest layers, gloves, waterproof shoes","Headache or dizziness means head down early"],"Zero Point Yumesamdong Sikkim",true],
+  [2,"10:30","Back to Lachung","road",7,"pap","~1.5 h","Leave around 10:30 and reach Lachung near noon for a quick lunch and checkout.",[],"Lachung Sikkim"],
+  [2,"12:30","Drive to Gangtok","road",10,"none","6–7 h","Leave around 12:30 PM and reach Gangtok about 6:30–7:30 PM.",["You're leaving North Sikkim: Gangtok needs no permit"],"North Sikkim highway Gangtok"],
+  [2,"19:30","Overnight in Gangtok","townnight",10,"none","Night","Dinner near MG Marg if you have the energy; otherwise rest.",[],"MG Marg Gangtok night"],
+  [3,"07:00","Drive to Namchi","road",10.5,"none","2.5–3 h","Depart about 7 AM and reach Namchi by 9:30–10.",[],"Gangtok to Namchi road"],
+  [3,"09:45","Char Dham, Namchi","chardham",11,"ticket","~1 h","The hilltop pilgrimage complex, also called Siddheshwar Dham.",["Normal entry rules apply"],"Char Dham Namchi Siddheshwar Dham",true],
+  [3,"11:00","Drive to Ravangla","road",11.5,"none","~1.5 h","Leave around 11 AM and reach about 12:30 PM.",[],"Namchi to Ravangla road"],
+  [3,"12:30","Buddha Park, Ravangla","buddha",12,"ticket","~1 h","The giant Buddha statue with Himalayan views all around.",["Walk the park and see the statue","Have lunch in Ravangla before leaving"],"Buddha Park Ravangla",true],
+  [3,"14:00","Drive to Pelling","road",12.5,"none","3–3.5 h","Leave around 2–2:30 PM and reach Pelling about 5–6 PM.",[],"Ravangla to Pelling road"],
+  [3,"18:00","Overnight in Pelling","pelling",13,"none","Night","Check in and rest. On a clear morning, look for Kanchenjunga before you leave.",["Pelling sits at about 6,800 ft"],"Pelling Kanchenjunga view"],
+  [4,"06:45","Drive to Darjeeling","road",14,"none","~5 h","Depart 6:30–7 AM and arrive about 11:30 AM–12 PM.",["Leaving Sikkim for West Bengal: no sightseeing permit needed"],"Pelling to Darjeeling road"],
+  [4,"12:00","Check in and lunch","town",14,"none","2 h","Check into the hotel, freshen up and eat.",[],"Darjeeling town"],
+  ...darjDay(14),...lastDay(15)]),
+ alt:[["Bengaluru",3020,"Start","Home base. Early flight out."],["Bagdogra",410,"Day 1","The plains. Your gateway in and out."],["Lachung",8610,"Day 1","A big jump from the plains in one day. Hydrate and sleep early."],["Yumthang",11800,"Day 2","High valley. Walk slowly."],["Zero Point",15300,"Day 2","Highest point of the trip. Short visit, heavy layers, no running."],["Lachung",8610,"Day 2","Quick lunch on the way down."],["Gangtok",5410,"Day 2","Back to comfortable altitude for the night."],["Namchi",5500,"Day 3","Char Dham."],["Ravangla",7000,"Day 3","Buddha Park."],["Pelling",6800,"Day 3","Night with Kanchenjunga views."],["Darjeeling",6700,"Day 4","Hill-station base for the last night."],["Tiger Hill",8480,"Day 5","Pre-dawn sunrise point. Near freezing, so dress warm."],["Bagdogra",410,"Day 5","Fly home."]],
+ ridgeLbl:[[4,"Zero Point 15,300 ft"],[3,"Yumthang"],[11,"Tiger Hill"],[2,"Lachung"]],altPeak:4,
+ altLede:"Tap any point. You climb from the plains to about 8,600 ft on day 1, then to roughly 15,300 ft the next morning. That's a fast ascent, so go slow above the shaded line and descend if you feel unwell.",
+ permitLede:"North Sikkim (7–8 Nov) is the only permit area on this plan. Only a registered Sikkim operator can arrange it, with their own vehicle and driver.",
+ permits:[["Bagdogra → Lachung","pap","North Sikkim permit via a registered operator"],["Lachung","pap","Covered by the North Sikkim permit"],["Yumthang Valley","pap","Covered by the North Sikkim permit"],["Zero Point","pap","Usually an extra local permit or fee, arranged in Lachung"],["Gangtok","none","No permit"],["Namchi, Char Dham","none","Normal entry if applicable"],["Ravangla, Buddha Park","none","Normal entry if applicable"],["Pelling","none","No permit for Indian citizens"],["Pelling → Darjeeling","none","No sightseeing permit"]],
+ docsTitle:"Send to the operator early",
+ docs:[["Photo ID proving nationality","Ask your operator which IDs they accept for the North Sikkim permit"],...commonDocs,["Share documents well before 7 Nov","Operators now process North Sikkim permits online, often 1–3 weeks ahead"]],
+ fine:"North Sikkim reopened to tourists in 2026 after the 2023 floods, but roads can still close for landslides or snow. Reconfirm road status a few days before you fly and agree a fallback with your operator, such as Plan A's East Sikkim day.",
+ brief:"We land at Bagdogra on 7th and want to leave for Lachung by 12 PM with the North Sikkim permit ready. On 8th: Yumthang at 5:30–6 AM, then Zero Point, back to Lachung by noon and on to Gangtok by evening. On 9th: Gangtok → Namchi (Char Dham) → Ravangla (Buddha Park) → Pelling. On 10th: leave Pelling by 6:30–7 AM and reach Darjeeling around noon."
+}};
+let PLAN=PLANS[store.get("plan","A")]||PLANS.A;
+let STOPS=PLAN.stops;
+const allStops=()=>PLANS.A.stops.concat(PLANS.B.stops);
+
+/* ---------- hero ridge & countdown ---------- */
+function drawRidge(){
+  const ALT=PLAN.alt,W=1200,H=400,px=i=>40+i*(W-80)/(ALT.length-1),py=a=>H-30-a/16000*(H-90);
+  let line="",back="M0 "+H;ALT.forEach((p,i)=>{line+=(i?" L":"M")+px(i).toFixed(1)+" "+py(p[1]).toFixed(1);back+=" L"+(px(i)+24).toFixed(1)+" "+(py(p[1]*0.8)+18).toFixed(1)});back+=" L"+W+" "+H+"Z";
+  const fill="M0 "+H+" L0 "+py(ALT[0][1])+" "+line.replace("M","L")+" L"+W+" "+py(410)+" L"+W+" "+H+"Z";
+  const sv=$("#ridge"),box=$("#ridgebox");box.classList.remove("drawn");box.querySelectorAll(".rlbl").forEach(x=>x.remove());
+  sv.innerHTML='<path class="r-back" d="'+back+'"/><path class="r-fill" d="'+fill+'"/><path class="r-line" id="rline" d="'+line+'"/>';
+  const L=$("#rline"),len=L.getTotalLength();
+  PLAN.ridgeLbl.forEach(([i,t])=>{const d=document.createElement("div");d.className="rlbl";d.textContent=t;d.style.left=(px(i)/W*100)+"%";d.style.top=(py(ALT[i][1])/H*100)+"%";box.appendChild(d)});
+  if(reduce){box.classList.add("drawn");return}
+  L.style.strokeDasharray=len;L.style.strokeDashoffset=len;L.getBoundingClientRect();
+  L.style.transition="stroke-dashoffset 2.2s cubic-bezier(.6,.05,.3,1)";requestAnimationFrame(()=>L.style.strokeDashoffset=0);clearTimeout(drawRidge.t);drawRidge.t=setTimeout(()=>box.classList.add("drawn"),1800);
+}
+function tick(){
+  const now=Date.now(),start=STOPS[0].ts,end=STOPS[STOPS.length-1].ts+3*3600e3,c=$("#count");
+  if(now<start){let d=start-now;const D=Math.floor(d/864e5);d%=864e5;const h=Math.floor(d/36e5);d%=36e5;const m=Math.floor(d/6e4);
+    c.innerHTML="<div><b>"+D+"</b><small>days</small></div><div><b>"+h+"</b><small>hours</small></div><div><b>"+m+"</b><small>minutes</small></div><p style='flex-basis:100%;margin:0;font-size:14px;color:var(--muted)'>until wheels up, 5:30 AM on 7 Nov</p>";}
+  else c.innerHTML="";
+  const lb=$("#livebar");
+  if(now>=start&&now<=end){let cur=null,nxt=null;for(const s of STOPS){if(s.ts<=now)cur=s;else{nxt=s;break}}
+    lb.hidden=false;$("#livetext").innerHTML="<b>Now:</b> "+(cur?cur.title:"Getting ready")+(nxt?" &nbsp;<b>Next:</b> "+nxt.title+" at "+fmt(nxt.t):"")+(cur?' <a href="#'+cur.id+'">Go</a>':"");}
+  else if(now>end){lb.hidden=false;$("#livetext").textContent="Trip complete. Hope the mountains were kind.";}
+}
+setInterval(tick,30000);
+
+/* ---------- prayer flags band ---------- */
+(function(){const cols=["#2F6DB5","#F2F2F2","#C8423B","#2E8B57","#E8B12F"];let s='<path d="M0 6 Q600 30 1200 6" stroke="#8a7a66" stroke-width="1.2" fill="none"/>';
+  for(let i=1;i<40;i++){const t=i/40,x=t*1200,y=(1-t)*(1-t)*6+2*(1-t)*t*30+t*t*6;s+='<rect x="'+(x-9)+'" y="'+y.toFixed(1)+'" width="18" height="22" fill="'+cols[i%5]+'" stroke="rgba(0,0,0,.08)" style="animation-delay:'+(i%7*.25)+'s"/>'}
+  $("#flags0").innerHTML=s})();
+
+/* ---------- map (real borders) ---------- */
+const PL={Bagdogra:[26.68,88.33],Gangtok:[27.33,88.61],Tsomgo:[27.37,88.76],Baba:[27.36,88.81],Nathula:[27.39,88.84],Ravangla:[27.30,88.36],Namchi:[27.17,88.36],Temi:[27.24,88.43],Darjeeling:[27.04,88.26],"Tiger Hill":[26.99,88.30],Batasia:[27.01,88.25],
+  Lachung:[27.69,88.745],Yumthang:[27.826,88.696],"Zero Point":[27.93,88.725],Pelling:[27.30,88.24],"~Singtam":[27.23,88.50],"~Mangan":[27.51,88.53],"~Chungthang":[27.60,88.64]};
+const proj=([la,lo])=>[(lo-88.02)*408.163,(28.05-la)*458.5];
+const GEO={"sk_East":"M320.8 291.5 L321.3 292.9 L321.7 294.1 L322.2 295.6 L323.0 296.6 L325.5 297.7 L326.3 298.4 L326.9 299.2 L327.5 300.7 L328.7 302.0 L331.1 303.2 L331.7 304.2 L332.4 305.1 L332.9 306.1 L334.0 307.7 L335.2 308.2 L336.4 307.6 L337.6 306.8 L338.3 305.5 L339.9 304.3 L341.4 304.1 L342.4 304.5 L343.5 305.5 L344.1 306.9 L345.8 312.6 L346.7 313.1 L350.7 314.3 L352.3 317.4 L353.1 322.4 L354.5 326.2 L355.0 327.2 L356.7 328.3 L358.0 328.6 L359.4 328.1 L362.0 329.8 L364.1 329.6 L365.5 330.3 L368.1 331.7 L366.8 333.5 L365.2 335.3 L364.7 336.4 L364.3 339.6 L363.0 341.2 L362.9 343.1 L363.2 344.7 L363.5 347.1 L362.2 351.4 L360.7 353.6 L360.0 354.3 L358.9 355.3 L357.6 355.4 L356.3 356.2 L352.4 358.1 L351.0 359.4 L349.9 360.9 L348.2 362.6 L344.4 361.2 L341.3 361.6 L337.6 361.4 L336.3 361.8 L332.7 360.8 L331.0 361.1 L329.4 362.0 L328.2 362.2 L327.6 363.3 L326.5 363.8 L323.4 365.7 L318.8 367.9 L318.2 372.7 L318.2 373.8 L318.6 380.2 L318.1 382.5 L316.4 385.8 L315.1 387.7 L314.1 388.9 L313.8 390.4 L314.0 394.3 L313.6 396.2 L312.1 398.0 L309.7 398.9 L308.1 399.0 L306.1 399.2 L304.5 399.6 L302.8 400.8 L301.6 402.3 L301.3 404.0 L302.3 408.9 L301.9 410.3 L299.5 411.8 L298.6 413.5 L292.7 417.5 L290.8 418.4 L287.6 417.9 L284.8 415.4 L283.7 412.5 L282.4 405.7 L278.4 401.6 L274.1 399.5 L271.2 398.8 L269.5 399.1 L266.7 400.4 L264.5 402.6 L261.1 407.1 L259.8 407.0 L254.1 404.8 L252.6 404.5 L250.3 401.4 L244.5 395.3 L239.5 394.5 L238.2 393.8 L236.0 393.7 L234.3 393.8 L233.3 392.3 L231.4 394.1 L230.6 393.0 L223.0 395.3 L220.0 394.9 L212.6 397.2 L207.8 399.9 L204.4 399.7 L195.5 396.5 L192.7 392.8 L190.3 388.7 L190.8 381.3 L191.7 375.7 L190.2 371.6 L186.1 368.3 L183.9 368.0 L179.5 366.5 L177.2 364.1 L172.3 361.6 L170.9 359.2 L170.1 355.8 L170.5 352.5 L172.8 345.7 L172.3 343.5 L174.2 341.1 L175.3 336.8 L178.3 335.8 L180.5 333.8 L183.3 333.0 L186.9 330.7 L188.3 328.4 L189.1 324.4 L186.4 319.7 L185.8 316.1 L186.1 313.4 L188.2 307.9 L190.3 307.8 L194.4 306.0 L199.5 302.8 L201.7 300.5 L203.4 299.3 L205.7 299.8 L207.7 299.6 L211.8 300.7 L216.3 301.5 L227.4 300.6 L230.9 299.7 L232.2 301.5 L234.6 302.3 L241.2 303.6 L245.7 303.8 L250.1 303.3 L251.4 302.2 L254.8 301.7 L258.8 302.1 L260.6 301.2 L265.4 298.0 L267.1 298.0 L270.2 298.9 L273.5 298.8 L275.7 297.2 L280.6 292.5 L283.2 290.4 L288.4 289.2 L297.5 291.3 L303.0 291.7 L305.4 290.5 L309.2 287.5 L311.2 288.0 L315.3 290.5 L320.8 291.5Z","sk_North":"M305.4 -5.0 L306.4 -4.2 L307.5 -3.1 L311.1 -0.4 L311.3 0.7 L312.5 2.6 L316.2 5.9 L317.3 7.9 L318.1 8.7 L319.3 9.7 L320.5 10.7 L321.6 11.3 L325.2 13.3 L326.2 13.9 L328.7 15.1 L330.2 16.0 L331.8 17.6 L332.5 22.7 L333.2 23.7 L334.3 25.2 L335.1 27.1 L334.8 33.6 L334.6 38.9 L335.9 40.5 L336.4 42.9 L334.6 44.6 L333.2 47.1 L333.2 48.2 L333.2 54.1 L334.5 54.8 L340.2 56.5 L342.4 57.2 L343.4 58.0 L344.8 62.8 L345.6 64.6 L347.0 67.7 L349.9 69.9 L350.9 70.8 L351.2 71.9 L351.6 73.8 L351.4 75.0 L351.0 77.8 L351.3 82.5 L351.7 83.5 L352.9 84.6 L353.4 86.5 L353.3 87.5 L352.2 88.3 L351.9 89.2 L351.4 96.8 L350.6 97.6 L349.8 99.0 L349.1 100.4 L348.2 102.1 L346.2 103.4 L345.1 103.8 L343.8 104.7 L341.1 106.3 L340.5 107.8 L340.9 108.9 L341.8 110.9 L341.6 115.1 L339.7 124.6 L339.8 129.1 L340.5 132.8 L341.2 134.4 L341.8 135.4 L342.7 136.2 L343.4 138.0 L343.8 142.6 L343.3 144.0 L340.5 146.6 L339.4 149.4 L339.0 152.1 L335.2 154.9 L334.2 155.4 L334.1 156.7 L334.4 157.9 L335.2 159.2 L336.9 160.3 L336.9 163.0 L336.4 165.6 L336.5 166.9 L336.7 168.9 L337.4 171.7 L337.4 174.7 L336.0 177.4 L334.1 179.4 L332.3 181.9 L331.5 183.2 L329.0 185.5 L327.5 186.7 L326.5 187.1 L324.7 186.8 L323.8 186.4 L322.7 186.7 L321.3 189.7 L321.0 191.6 L321.7 197.6 L321.8 199.8 L320.6 204.8 L319.2 206.4 L317.5 207.9 L316.2 209.1 L315.4 210.0 L313.7 211.8 L313.2 212.9 L312.5 217.2 L311.7 218.0 L305.5 221.0 L304.9 222.4 L305.3 224.7 L307.4 231.8 L308.2 234.9 L309.9 236.6 L311.9 238.6 L313.1 238.7 L313.9 240.2 L313.1 242.6 L312.7 245.3 L312.7 246.9 L312.3 249.2 L311.5 253.8 L312.0 255.0 L312.4 257.8 L311.8 259.4 L311.3 261.5 L310.8 264.5 L310.8 267.0 L311.1 269.0 L311.6 272.6 L313.2 274.0 L313.3 275.0 L315.3 276.0 L316.2 276.5 L315.9 281.2 L316.3 283.0 L317.0 283.9 L318.5 284.9 L319.7 285.6 L320.0 286.5 L320.8 291.5 L315.3 290.5 L311.2 288.0 L309.2 287.5 L305.4 290.5 L303.0 291.7 L297.5 291.3 L288.4 289.2 L283.2 290.4 L280.6 292.5 L275.7 297.2 L273.5 298.8 L270.2 298.9 L267.1 298.0 L265.4 298.0 L260.6 301.2 L258.8 302.1 L254.8 301.7 L251.4 302.2 L250.1 303.3 L245.7 303.8 L241.2 303.6 L234.6 302.3 L232.2 301.5 L230.9 299.7 L227.4 300.6 L216.3 301.5 L211.8 300.7 L207.7 299.6 L205.7 299.8 L203.4 299.3 L201.7 300.5 L199.5 302.8 L194.4 306.0 L190.3 307.8 L188.2 307.9 L185.1 306.7 L181.8 304.6 L179.2 303.8 L175.0 303.3 L170.8 301.0 L168.0 298.1 L166.3 296.0 L163.9 292.0 L161.0 289.5 L159.8 287.2 L158.9 284.3 L158.8 280.0 L159.5 276.6 L156.6 271.2 L155.9 268.9 L156.0 265.8 L155.3 263.3 L152.4 261.8 L143.0 253.3 L138.5 247.4 L137.1 244.2 L134.9 242.4 L129.5 240.1 L126.5 239.5 L123.9 239.3 L120.0 239.7 L108.4 243.5 L104.6 246.2 L97.1 240.3 L90.9 237.7 L88.2 236.1 L86.7 233.6 L84.3 225.9 L78.5 218.3 L75.2 214.8 L56.4 206.2 L41.4 201.0 L39.5 199.9 L40.0 196.8 L41.7 193.9 L40.8 192.8 L42.2 188.4 L41.9 185.6 L46.5 181.1 L48.9 180.1 L51.9 176.3 L52.3 173.5 L52.8 170.2 L53.2 169.1 L53.6 167.9 L56.1 164.9 L53.5 159.7 L53.9 156.9 L56.4 152.6 L56.1 147.1 L57.6 141.9 L62.2 141.5 L65.8 139.0 L65.0 133.8 L66.7 132.3 L67.8 130.2 L67.0 128.9 L67.1 126.3 L68.5 125.2 L69.7 123.2 L72.6 120.9 L73.4 119.0 L72.0 116.5 L70.4 115.6 L69.2 114.1 L68.5 109.9 L65.9 107.5 L63.7 106.7 L63.6 105.4 L69.4 103.1 L72.3 98.3 L75.1 97.5 L75.1 95.2 L73.8 93.8 L73.5 92.6 L73.0 90.1 L71.6 89.6 L69.8 90.0 L68.5 88.7 L66.7 88.7 L65.7 88.8 L64.1 86.7 L63.4 85.7 L61.1 84.7 L60.0 83.3 L55.8 82.3 L53.6 79.5 L51.3 78.8 L49.8 79.1 L48.0 77.3 L44.9 77.3 L44.9 75.2 L43.8 72.8 L43.4 71.0 L42.0 69.9 L41.5 68.7 L40.6 67.8 L39.8 66.2 L38.3 63.2 L38.2 61.5 L39.5 57.0 L43.2 53.0 L44.4 51.2 L44.4 47.9 L42.3 46.8 L42.3 45.7 L44.9 43.1 L46.2 40.5 L48.6 39.7 L51.7 41.0 L54.6 42.3 L60.1 46.6 L62.7 48.3 L66.4 48.8 L68.8 48.7 L70.6 47.9 L71.7 47.3 L72.3 45.6 L73.2 42.2 L73.3 41.0 L74.5 38.8 L77.5 37.7 L79.2 38.5 L80.3 39.0 L82.3 39.4 L84.1 38.0 L85.6 37.6 L86.8 38.6 L87.8 44.0 L88.8 44.7 L89.1 45.7 L91.4 46.5 L93.0 45.8 L97.5 43.0 L98.6 42.9 L100.1 42.8 L102.3 42.0 L104.0 41.0 L104.8 39.3 L105.9 37.9 L108.6 37.4 L110.2 37.2 L111.8 37.6 L116.2 36.7 L117.9 35.5 L120.0 32.8 L120.9 32.2 L123.6 31.5 L125.5 31.2 L127.3 29.9 L128.6 28.9 L129.7 28.4 L132.7 27.7 L134.8 27.7 L136.4 27.8 L140.3 28.4 L144.8 30.4 L147.6 32.2 L150.5 33.1 L152.7 32.2 L153.5 31.6 L155.4 30.6 L156.9 29.0 L157.8 28.5 L158.7 26.4 L159.9 24.9 L164.7 20.3 L165.9 19.2 L168.4 18.2 L175.9 16.0 L177.9 15.0 L180.2 13.8 L181.5 12.3 L183.3 7.9 L184.3 6.0 L186.9 3.4 L188.5 2.3 L191.7 0.9 L196.4 0.5 L197.1 1.3 L198.8 1.6 L202.7 2.7 L204.4 4.1 L205.0 5.0 L207.3 6.0 L208.8 6.2 L211.4 5.3 L212.6 4.4 L213.4 2.7 L213.4 0.1 L213.7 -1.2 L216.4 -5.0Z","sk_South":"M188.2 307.9 L186.1 313.4 L185.8 316.1 L186.4 319.7 L189.1 324.4 L188.3 328.4 L186.9 330.7 L183.3 333.0 L180.5 333.8 L178.3 335.8 L175.3 336.8 L174.2 341.1 L172.3 343.5 L172.8 345.7 L170.5 352.5 L170.1 355.8 L170.9 359.2 L172.3 361.6 L177.2 364.1 L179.5 366.5 L183.9 368.0 L186.1 368.3 L190.2 371.6 L191.7 375.7 L190.8 381.3 L190.3 388.7 L192.7 392.8 L195.5 396.5 L204.4 399.7 L204.3 401.2 L208.1 405.4 L206.8 407.9 L209.0 410.7 L208.1 412.6 L206.8 412.8 L204.8 412.5 L203.6 413.7 L202.4 415.5 L200.9 416.8 L199.0 419.1 L197.1 420.0 L195.5 421.3 L194.5 422.7 L194.1 423.9 L192.6 424.2 L190.5 423.3 L188.3 425.1 L185.2 426.1 L183.3 427.6 L182.3 429.2 L181.6 433.4 L179.7 437.5 L177.3 440.3 L174.0 442.3 L171.3 442.8 L168.1 444.0 L167.0 443.1 L159.6 439.8 L154.1 438.1 L150.0 436.3 L143.1 435.8 L140.4 436.3 L135.6 435.1 L133.9 434.1 L132.7 432.4 L130.9 430.7 L127.2 431.8 L124.0 433.3 L122.5 432.2 L122.6 427.9 L122.0 426.7 L118.9 424.0 L116.1 422.5 L114.2 422.7 L112.2 424.2 L105.4 421.4 L104.2 416.1 L104.8 415.1 L105.0 413.2 L106.0 412.3 L108.4 410.7 L109.9 406.5 L110.8 406.1 L112.3 403.9 L112.6 401.8 L114.1 400.5 L116.2 399.7 L117.2 398.1 L120.3 396.3 L124.0 395.4 L124.8 394.8 L124.1 393.4 L126.3 392.2 L125.3 390.3 L125.3 389.1 L124.2 387.6 L121.7 380.3 L120.4 379.1 L116.5 378.3 L115.4 377.7 L113.6 372.7 L114.5 368.6 L114.6 363.8 L113.9 361.8 L110.8 359.3 L107.9 356.1 L105.7 355.0 L104.5 353.8 L103.4 352.3 L103.7 350.1 L108.4 346.2 L110.6 345.2 L114.9 344.1 L116.1 342.6 L116.7 341.2 L116.6 336.6 L115.8 335.2 L114.4 334.1 L112.3 333.1 L110.9 331.6 L111.4 329.6 L112.4 328.2 L114.2 326.6 L120.2 322.8 L121.5 321.2 L123.6 314.1 L124.7 312.3 L128.2 310.8 L132.3 309.9 L136.0 307.9 L135.6 305.2 L136.0 302.6 L135.7 298.3 L134.6 296.6 L132.9 292.5 L131.8 291.5 L129.8 292.9 L128.1 295.1 L126.0 293.2 L125.0 290.2 L122.6 289.9 L118.9 291.0 L114.5 290.2 L112.3 291.3 L110.3 293.2 L105.7 295.6 L103.7 295.3 L101.9 292.5 L101.8 289.0 L98.5 269.6 L98.3 256.8 L99.2 253.0 L100.5 250.5 L102.5 247.9 L104.6 246.2 L108.4 243.5 L120.0 239.7 L123.9 239.3 L126.5 239.5 L129.5 240.1 L134.9 242.4 L137.1 244.2 L138.5 247.4 L143.0 253.3 L152.4 261.8 L155.3 263.3 L156.0 265.8 L155.9 268.9 L156.6 271.2 L159.5 276.6 L158.8 280.0 L158.9 284.3 L159.8 287.2 L161.0 289.5 L163.9 292.0 L166.3 296.0 L168.0 298.1 L170.8 301.0 L175.0 303.3 L179.2 303.8 L181.8 304.6 L185.1 306.7 L188.2 307.9Z","sk_West":"M103.7 295.3 L105.7 295.6 L110.3 293.2 L112.3 291.3 L114.5 290.2 L118.9 291.0 L122.6 289.9 L125.0 290.2 L126.0 293.2 L128.1 295.1 L129.8 292.9 L131.8 291.5 L132.9 292.5 L134.6 296.6 L135.7 298.3 L136.0 302.6 L135.6 305.2 L136.0 307.9 L132.3 309.9 L128.2 310.8 L124.7 312.3 L123.6 314.1 L121.5 321.2 L120.2 322.8 L114.2 326.6 L112.4 328.2 L111.4 329.6 L110.9 331.6 L112.3 333.1 L114.4 334.1 L115.8 335.2 L116.6 336.6 L116.7 341.2 L116.1 342.6 L114.9 344.1 L110.6 345.2 L108.4 346.2 L104.2 349.2 L103.4 352.3 L104.5 353.8 L105.7 355.0 L107.9 356.1 L110.8 359.3 L113.9 361.8 L114.6 363.8 L114.5 368.6 L113.6 372.7 L115.4 377.7 L116.5 378.3 L120.4 379.1 L121.7 380.3 L124.2 387.6 L125.3 389.1 L125.3 390.3 L126.3 392.2 L124.1 393.4 L124.8 394.8 L124.0 395.4 L120.3 396.3 L117.2 398.1 L116.2 399.7 L114.1 400.5 L112.6 401.8 L112.3 403.9 L110.8 406.1 L109.9 406.5 L108.4 410.7 L107.0 412.1 L105.0 413.2 L104.8 415.1 L104.2 416.1 L105.4 421.4 L102.4 421.8 L99.4 423.0 L94.5 423.9 L89.8 426.2 L86.7 426.5 L84.5 425.8 L82.2 424.0 L79.1 419.5 L77.5 420.3 L71.7 419.0 L68.8 419.8 L66.8 419.4 L64.9 419.7 L62.3 421.7 L56.5 429.0 L55.3 430.0 L54.0 430.2 L50.5 427.7 L47.6 427.8 L43.6 425.0 L42.2 424.7 L31.0 419.3 L29.7 418.9 L28.0 417.8 L26.9 416.5 L26.1 414.9 L25.7 413.1 L26.1 407.6 L25.8 405.8 L24.0 404.4 L21.7 401.5 L21.4 399.2 L20.1 396.6 L19.4 394.2 L19.9 392.3 L22.6 390.3 L19.7 387.6 L18.1 386.1 L17.0 384.5 L15.6 383.4 L10.9 382.3 L5.3 380.1 L1.6 380.3 L-1.2 381.1 L0.6 378.4 L0.7 376.5 L0.7 373.4 L1.8 372.6 L3.0 372.8 L2.8 370.6 L4.2 367.2 L5.5 366.9 L5.4 360.8 L5.9 359.6 L5.3 356.8 L6.4 352.4 L5.8 350.3 L8.5 347.8 L10.8 347.3 L9.6 343.4 L9.8 342.0 L11.3 339.4 L12.7 338.2 L13.1 335.4 L14.4 332.8 L17.4 330.9 L18.8 328.2 L20.1 327.6 L19.3 325.1 L18.6 324.3 L17.3 321.3 L16.4 318.5 L13.4 317.1 L10.0 311.5 L11.3 307.3 L10.9 305.2 L11.1 302.8 L11.6 300.1 L12.7 297.8 L12.0 295.7 L13.1 294.9 L13.6 292.2 L16.1 289.8 L20.1 286.7 L25.6 285.9 L25.7 284.5 L25.0 283.5 L22.6 282.6 L20.6 280.4 L22.1 277.9 L20.3 275.4 L20.0 274.1 L20.3 271.6 L17.6 270.1 L16.0 267.2 L13.8 265.2 L10.9 262.1 L11.3 260.7 L10.9 259.2 L11.1 255.6 L10.7 254.1 L11.9 251.6 L13.6 250.3 L15.3 250.2 L16.4 248.0 L18.0 246.8 L16.3 244.5 L18.0 240.7 L20.3 240.2 L19.5 238.7 L17.3 237.9 L17.0 236.3 L17.7 234.0 L19.5 231.8 L20.9 231.0 L21.2 226.7 L23.9 225.4 L26.0 222.5 L25.3 221.0 L23.6 219.2 L27.4 211.4 L30.8 207.6 L36.0 205.3 L39.3 201.6 L39.5 199.9 L41.4 201.0 L56.4 206.2 L75.2 214.8 L78.5 218.3 L84.3 225.9 L86.7 233.6 L88.2 236.1 L90.9 237.7 L97.1 240.3 L104.6 246.2 L102.5 247.9 L100.5 250.5 L99.2 253.0 L98.3 256.8 L98.5 269.6 L101.8 289.0 L101.9 292.5 L103.7 295.3Z","wb_Darjiling":"M43.6 425.0 L47.6 427.8 L50.5 427.7 L54.0 430.2 L55.3 430.0 L56.5 429.0 L62.3 421.7 L64.9 419.7 L66.8 419.4 L68.8 419.8 L71.7 419.0 L77.5 420.3 L79.1 419.5 L82.2 424.0 L84.5 425.8 L86.7 426.5 L89.8 426.2 L94.5 423.9 L99.4 423.0 L102.4 421.8 L105.0 421.3 L112.2 424.2 L114.2 422.7 L116.1 422.5 L118.9 424.0 L122.0 426.7 L122.6 427.9 L122.5 432.2 L124.0 433.3 L127.2 431.8 L130.9 430.7 L132.7 432.4 L133.9 434.1 L135.6 435.1 L140.4 436.3 L143.1 435.8 L150.0 436.3 L154.1 438.1 L159.6 439.8 L167.0 443.1 L168.1 444.0 L171.3 442.8 L174.0 442.3 L177.3 440.3 L179.7 437.5 L181.6 433.4 L182.3 429.2 L183.3 427.6 L185.2 426.1 L188.3 425.1 L190.5 423.3 L192.6 424.2 L194.1 423.9 L194.5 422.7 L195.5 421.3 L197.1 420.0 L199.0 419.1 L200.9 416.8 L202.4 415.5 L203.6 413.7 L204.8 412.5 L206.8 412.8 L208.1 412.6 L209.0 410.7 L206.8 407.9 L208.1 405.4 L204.3 401.2 L204.4 399.7 L207.8 399.9 L212.6 397.2 L220.0 394.9 L223.0 395.3 L230.6 393.0 L231.4 394.1 L233.3 392.3 L234.3 393.8 L235.7 393.1 L238.2 393.8 L239.5 394.5 L244.5 395.3 L250.3 401.4 L252.6 404.5 L254.1 404.8 L259.8 407.0 L261.1 407.1 L264.5 402.6 L266.7 400.4 L269.5 399.1 L271.2 398.8 L274.1 399.5 L278.4 401.6 L282.4 405.7 L283.7 412.5 L284.8 415.4 L287.6 417.9 L290.8 418.4 L292.7 417.5 L298.6 413.5 L298.4 414.7 L298.4 415.9 L302.0 416.9 L304.6 417.8 L305.9 417.9 L308.3 418.1 L311.5 419.1 L312.5 419.2 L316.8 418.4 L318.4 418.7 L320.1 420.3 L321.1 421.8 L321.9 422.7 L322.7 423.3 L326.3 425.7 L329.0 427.5 L333.0 428.4 L335.9 427.9 L337.7 429.0 L338.3 430.5 L341.5 432.3 L344.8 431.3 L346.2 431.4 L347.2 435.7 L348.1 439.2 L347.6 445.8 L348.2 449.6 L348.9 453.3 L350.0 460.5 L350.5 462.6 L350.5 463.8 L350.0 465.4 L349.2 467.0 L348.8 468.3 L347.8 473.9 L347.5 476.0 L347.5 492.0 L347.8 497.6 L346.5 498.1 L344.0 498.2 L340.9 497.6 L338.1 494.6 L336.0 493.0 L330.0 489.8 L327.7 489.0 L325.7 487.4 L323.1 485.9 L321.1 485.9 L317.4 486.7 L314.9 486.1 L313.9 487.3 L312.0 491.0 L310.2 493.4 L306.0 494.7 L303.9 497.0 L302.2 497.0 L300.7 497.9 L300.5 500.8 L302.4 516.1 L275.3 516.4 L262.2 515.2 L261.8 513.2 L264.2 508.9 L264.9 506.2 L263.6 503.0 L260.7 499.4 L258.8 501.1 L256.9 503.5 L255.8 506.8 L253.7 510.3 L251.3 512.4 L250.3 515.0 L250.7 518.9 L249.6 525.5 L243.4 526.5 L242.9 529.1 L240.9 530.3 L238.3 534.2 L238.4 536.8 L224.7 532.5 L222.2 534.7 L218.3 536.9 L215.9 537.6 L213.4 537.5 L212.0 539.1 L209.8 540.7 L207.0 541.9 L198.9 544.7 L197.4 544.3 L191.7 540.6 L188.7 539.1 L186.6 538.5 L187.9 542.4 L191.9 547.2 L192.6 548.6 L190.9 549.4 L188.4 549.7 L185.3 551.9 L181.8 552.7 L178.6 554.9 L175.3 555.6 L172.0 557.0 L169.5 561.1 L169.0 564.3 L167.6 565.4 L170.0 568.6 L169.0 569.4 L166.9 567.7 L167.9 570.6 L167.6 574.8 L168.8 575.2 L171.1 574.0 L170.8 575.9 L171.7 578.0 L170.6 579.2 L171.6 580.4 L171.2 581.3 L169.2 581.2 L169.1 583.1 L170.2 584.7 L168.4 588.0 L168.6 591.9 L168.1 593.1 L167.9 594.5 L167.0 595.0 L166.1 593.2 L164.8 593.7 L164.6 594.7 L165.3 596.1 L165.5 597.7 L164.5 598.6 L164.3 601.2 L164.9 604.9 L164.3 607.7 L165.6 610.1 L167.2 611.9 L169.1 613.0 L171.7 613.6 L173.1 614.8 L173.8 618.9 L173.0 620.4 L171.6 621.3 L169.4 621.9 L167.2 621.8 L165.3 621.0 L163.3 621.2 L159.6 619.6 L156.2 623.2 L153.9 626.9 L151.1 628.1 L151.4 630.2 L154.5 631.3 L155.2 640.6 L155.6 642.5 L155.3 645.1 L158.0 647.3 L159.0 649.9 L157.7 650.9 L156.1 652.0 L155.0 653.3 L154.5 654.6 L154.3 655.7 L154.1 656.7 L153.0 657.7 L151.6 658.4 L150.5 659.8 L151.0 661.4 L152.4 662.0 L153.4 662.2 L154.5 662.8 L154.8 664.0 L153.7 664.3 L152.7 663.6 L151.5 663.3 L150.5 663.8 L149.6 664.8 L148.9 666.3 L147.3 667.1 L145.9 667.8 L145.8 669.7 L46.0 670.0 L46.7 668.2 L46.7 665.9 L45.9 664.4 L48.3 662.3 L49.7 661.8 L50.9 653.1 L51.7 652.3 L53.4 651.4 L56.0 651.0 L57.1 649.9 L57.5 648.5 L57.4 646.6 L59.4 643.9 L60.2 632.7 L59.9 629.0 L61.4 626.5 L61.2 619.5 L63.5 615.4 L65.3 614.1 L67.2 610.2 L67.3 606.5 L68.3 604.9 L68.2 603.4 L69.0 601.5 L69.3 595.8 L68.8 593.1 L69.3 591.4 L69.6 586.2 L68.4 581.0 L65.4 571.6 L65.6 569.2 L65.9 565.7 L63.3 561.3 L63.0 559.8 L64.0 557.9 L61.3 556.1 L61.7 554.1 L62.5 552.6 L61.4 551.6 L61.2 550.5 L62.6 549.7 L63.9 548.4 L63.8 547.3 L64.1 546.0 L63.1 545.6 L63.7 543.2 L63.1 541.5 L60.9 540.9 L58.9 536.2 L57.2 535.2 L56.9 534.2 L54.9 534.1 L52.9 532.7 L52.2 531.9 L51.2 531.4 L50.8 530.2 L48.5 528.0 L49.7 526.6 L49.6 525.0 L51.8 520.0 L52.5 517.9 L49.0 513.1 L48.9 511.9 L46.9 509.9 L45.4 509.3 L42.0 504.3 L43.2 499.9 L42.7 497.5 L43.2 495.4 L46.2 490.5 L48.0 488.2 L43.5 487.3 L41.1 487.3 L40.1 486.8 L37.9 485.4 L37.3 483.8 L35.5 482.7 L33.4 479.9 L30.6 479.6 L29.0 477.8 L29.0 474.4 L27.0 471.1 L26.8 468.3 L24.3 465.3 L21.4 467.1 L19.2 467.3 L17.3 468.3 L16.5 467.0 L13.2 465.7 L11.4 464.7 L9.4 464.7 L8.3 464.8 L7.2 461.7 L4.2 458.2 L3.9 457.1 L3.4 455.1 L2.1 452.6 L1.9 450.7 L-0.4 447.8 L-0.6 446.2 L1.4 443.8 L1.5 441.3 L-0.6 441.0 L-1.9 438.7 L-2.3 436.9 L-3.4 436.5 L-5.0 434.8 L-5.0 416.3 L-2.9 410.6 L-3.2 409.3 L-2.6 405.6 L-1.3 405.0 L0.8 403.2 L0.1 401.9 L-1.8 399.7 L-1.4 394.1 L-0.6 393.0 L-0.8 389.9 L-2.3 388.1 L-0.7 384.9 L-2.0 382.1 L-1.2 381.1 L1.6 380.3 L5.3 380.1 L10.9 382.3 L15.6 383.4 L17.0 384.5 L18.1 386.1 L19.7 387.6 L22.4 389.3 L19.9 392.3 L19.4 394.2 L20.1 396.6 L21.4 399.2 L21.7 401.5 L24.0 404.4 L25.8 405.8 L26.1 407.6 L25.7 413.1 L26.1 414.9 L26.9 416.5 L28.0 417.8 L29.7 418.9 L31.0 419.3 L42.2 424.7 L43.6 425.0Z","wb_Jalpaiguri":"M372.1 489.2 L374.3 490.3 L378.2 491.8 L379.0 492.4 L379.4 493.9 L380.6 495.2 L381.9 499.3 L381.8 502.4 L380.0 504.2 L378.5 504.5 L376.0 506.1 L375.5 507.8 L376.1 509.6 L376.9 510.4 L379.5 512.3 L384.6 516.2 L388.2 517.9 L392.1 517.8 L393.7 517.8 L397.6 516.3 L402.2 513.6 L403.5 512.8 L405.0 512.1 L405.0 670.0 L164.2 670.0 L163.8 667.7 L163.8 666.3 L163.9 665.0 L163.6 663.9 L163.1 662.2 L162.9 660.9 L162.7 659.6 L162.6 658.1 L162.6 657.1 L162.7 655.9 L162.7 654.9 L161.9 653.7 L161.9 652.6 L162.2 650.6 L161.4 649.2 L160.3 649.1 L159.4 649.6 L158.0 647.3 L155.3 645.1 L155.6 642.5 L155.2 640.6 L154.5 631.3 L151.4 630.2 L151.1 628.1 L153.9 626.9 L156.2 623.2 L159.6 619.6 L163.3 621.2 L165.3 621.0 L167.2 621.8 L169.4 621.9 L171.6 621.3 L173.0 620.4 L173.8 618.9 L173.1 614.8 L171.7 613.6 L169.1 613.0 L167.2 611.9 L165.6 610.1 L164.3 607.7 L164.9 604.9 L164.3 601.2 L164.5 598.6 L165.5 597.7 L165.3 596.1 L164.6 594.7 L164.8 593.7 L166.1 593.2 L167.0 595.0 L167.9 594.5 L168.1 593.1 L168.6 591.9 L168.4 588.0 L170.2 584.7 L169.1 583.1 L169.2 581.2 L171.2 581.3 L171.6 580.4 L170.6 579.2 L171.7 578.0 L170.8 575.9 L171.1 574.0 L168.8 575.2 L167.6 574.8 L167.9 570.6 L167.0 568.6 L169.0 569.4 L170.0 568.6 L167.6 565.4 L169.0 564.3 L169.5 561.1 L172.0 557.0 L175.3 555.6 L178.6 554.9 L181.8 552.7 L185.3 551.9 L188.4 549.7 L190.9 549.4 L192.6 548.6 L191.9 547.2 L187.9 542.4 L186.6 538.5 L188.7 539.1 L191.7 540.6 L197.4 544.3 L198.9 544.7 L207.0 541.9 L209.8 540.7 L212.0 539.1 L213.4 537.5 L215.9 537.6 L218.3 536.9 L222.2 534.7 L224.7 532.5 L238.4 536.8 L238.3 534.2 L240.9 530.3 L242.9 529.1 L243.4 526.5 L249.6 525.5 L250.7 518.9 L250.3 515.0 L251.3 512.4 L253.7 510.3 L255.8 506.8 L256.9 503.5 L258.8 501.1 L260.7 499.4 L263.6 503.0 L264.9 506.2 L264.2 508.9 L261.8 513.2 L262.2 515.2 L275.3 516.4 L302.4 516.1 L300.5 500.8 L300.7 497.9 L302.2 497.0 L303.9 497.0 L306.0 494.7 L310.2 493.4 L312.0 491.0 L313.9 487.3 L314.9 486.1 L317.4 486.7 L321.1 485.9 L323.1 485.9 L325.7 487.4 L327.7 489.0 L330.0 489.8 L336.0 493.0 L338.1 494.6 L340.9 497.6 L344.0 498.2 L346.5 498.1 L347.8 497.6 L348.0 501.1 L348.5 502.1 L349.0 503.6 L350.5 503.9 L351.0 502.9 L351.5 502.0 L353.6 500.6 L354.4 499.8 L355.9 494.3 L356.7 491.9 L360.0 489.9 L360.9 489.0 L361.7 487.4 L363.0 486.0 L363.8 484.0 L366.0 483.5 L367.2 483.5 L368.3 484.5 L370.0 486.4 L371.5 488.8Z","c_China":"M-5.0 -5.0 L405.0 -5.0 L405.0 219.5 L401.1 224.4 L402.0 229.4 L397.1 235.0 L391.2 238.3 L389.0 244.1 L389.9 249.0 L391.9 253.1 L393.0 255.6 L386.2 262.2 L382.7 271.9 L380.0 282.8 L385.3 301.3 L392.3 318.8 L398.8 329.7 L388.5 338.2 L379.9 330.9 L365.4 329.7 L356.1 336.7 L344.7 329.0 L339.6 324.5 L331.0 313.0 L326.5 310.1 L321.7 307.9 L316.5 304.5 L307.6 294.1 L302.0 281.9 L299.7 268.6 L300.9 254.5 L301.0 246.9 L294.5 237.6 L294.3 231.2 L297.2 224.6 L305.1 212.7 L311.5 196.2 L320.7 181.1 L340.4 94.6 L340.8 87.5 L339.4 79.2 L335.8 72.3 L326.1 61.8 L322.7 56.0 L322.3 48.4 L326.4 33.3 L325.6 25.3 L319.6 17.9 L310.3 9.9 L292.1 -2.4 L283.4 -5.0 L209.4 -5.0 L208.5 -4.1 L202.9 4.8 L196.8 9.7 L185.9 6.3 L177.9 8.5 L155.1 25.3 L146.4 30.9 L72.6 42.0 L63.2 46.0 L58.4 47.3 L53.5 47.1 L43.5 45.6 L39.1 47.1 L32.6 55.8 L31.6 66.9 L34.6 78.1 L40.1 86.7 L30.9 84.7 L13.4 75.0 L4.1 71.8 L-0.8 72.4 L-5.0 74.1Z","c_Bhutan":"M405.0 519.7 L398.6 516.8 L389.9 517.3 L386.0 520.2 L381.4 521.5 L376.6 521.0 L372.4 518.5 L369.5 513.8 L369.6 509.4 L370.2 504.6 L369.2 499.0 L361.9 490.1 L353.6 491.1 L345.8 497.8 L339.5 506.4 L337.0 483.8 L337.0 458.7 L335.0 446.9 L329.6 436.5 L320.5 429.6 L294.9 416.0 L291.1 413.1 L289.8 412.2 L293.2 399.0 L299.7 383.9 L308.5 371.0 L318.8 363.9 L343.4 357.5 L349.4 352.8 L352.9 350.1 L356.1 336.7 L365.4 329.7 L379.9 330.9 L388.5 338.2 L398.8 329.7 L392.3 318.8 L385.3 301.3 L380.0 282.8 L382.7 271.9 L386.2 262.2 L393.0 255.6 L391.9 253.1 L389.9 249.0 L389.0 244.1 L391.2 238.3 L397.1 235.0 L402.0 229.4 L401.1 224.4 L405.0 219.5Z","c_Bangladesh":"M138.0 670.0 L138.9 668.0 L143.9 659.5 L149.1 654.0 L152.8 656.6 L153.4 665.0 L153.2 670.0Z","c_Nepal":"M40.1 86.7 L50.2 89.1 L55.7 91.1 L59.0 93.8 L59.8 99.2 L54.9 107.7 L57.0 126.5 L52.8 138.1 L46.9 149.9 L37.1 188.2 L11.7 231.4 L1.4 254.5 L0.9 259.4 L1.4 263.8 L3.3 272.8 L4.4 274.8 L8.1 278.6 L8.8 280.6 L7.9 284.5 L6.0 287.1 L3.9 289.4 L2.4 292.5 L-1.1 303.0 L-2.1 308.1 L-1.7 314.4 L0.1 319.4 L5.1 328.3 L6.2 333.5 L3.7 344.8 L-5.0 364.3 L-5.0 458.9 L-4.3 460.5 L3.0 465.2 L9.3 468.2 L14.7 473.2 L23.2 485.2 L31.4 500.1 L37.5 516.1 L41.0 523.2 L50.1 537.2 L53.6 544.3 L55.2 552.2 L56.8 572.0 L60.3 590.1 L60.8 598.8 L60.2 607.5 L58.5 616.6 L51.7 636.8 L34.9 670.0 L-5.0 670.0 L-5.0 74.1 L-0.8 72.4 L4.1 71.8 L13.4 75.0 L30.9 84.7 L40.1 86.7Z","river":"M233.4 162.7 L236.6 167.6 L239.7 177.3 L241.8 181.8 L244.1 184.3 L250.6 189.1 L252.9 191.2 L261.2 203.7 L264.0 211.2 L264.1 219.4 L260.9 226.5 L255.9 229.3 L241.8 231.9 L233.8 236.6 L230.4 238.2 L217.0 240.0 L213.9 241.3 L209.7 248.2 L207.2 257.8 L205.3 275.7 L205.1 279.0 L205.5 283.9 L204.7 294.8 L204.3 297.3 L197.0 308.3 L195.0 310.4 L193.3 312.6 L191.3 317.0 L190.2 321.5 L189.8 329.2 L188.5 332.6 L187.0 333.1 L181.6 332.3 L180.0 332.6 L179.2 334.6 L178.1 340.1 L175.8 345.8 L175.3 349.1 L174.5 352.0 L171.6 354.6 L171.6 357.7 L175.3 360.6 L180.5 368.6 L184.3 370.2 L190.1 371.3 L194.0 374.6 L196.2 380.1 L196.9 387.6 L200.4 397.2 L206.7 403.9 L209.5 410.7 L202.5 420.6 L187.1 430.0 L184.8 432.4 L182.1 437.8 L178.4 443.2 L173.2 445.6 L169.2 450.9 L175.3 475.5 L171.6 483.2 L171.6 486.3 L174.9 486.3 L174.9 489.7 L172.4 498.2 L179.5 514.9 L199.7 546.4 L241.8 596.5 L255.5 622.3 L262.9 635.7 L267.4 641.6 L293.5 667.0 L300.6 679.4 L303.3 694.1 L302.8 698.9 L300.9 707.0 L300.5 709.7 L301.7 714.0 L305.3 721.0 L306.1 723.8 L308.2 729.0 L355.4 783.1 L374.4 813.1 L422.2 864.4 L433.4 869.4 L438.1 876.4 L454.3 907.5 L459.3 924.1 L464.4 935.6 L465.7 953.9 L468.3 961.0 L489.8 973.6 L493.6 975.1 L497.3 980.1 L518.6 1001.4 L521.0 1005.8 L522.8 1010.3 L525.3 1014.4 L529.8 1017.6 L534.2 1018.2 L544.3 1017.2 L551.5 1020.7 L561.2 1022.4 L563.2 1025.3 L565.2 1027.3 L591.0 1043.8 L597.1 1050.1 L599.7 1059.9 L601.5 1064.6 L605.3 1068.5 L610.9 1072.6 L611.5 1074.8 L617.0 1083.8 L619.5 1089.2 L620.1 1091.9 L619.9 1093.8 L618.6 1099.9 L618.1 1103.9 L618.2 1107.7 L619.0 1111.4 L621.8 1119.2 L625.1 1135.5 L628.4 1142.0 L630.3 1145.1 L632.7 1148.1 L635.2 1149.9 L638.2 1150.8 L660.0 1153.4 L667.0 1155.6 L669.7 1157.4 L671.9 1160.4 L672.4 1163.6 L671.4 1170.7 L671.2 1175.0 L671.9 1179.5 L673.0 1184.0 L674.6 1188.0 L676.6 1191.1 L684.3 1198.9 L684.5 1200.1"};
+const LBLPOS_B={Ravangla:[0,-12,"middle"]};
+const LBLPOS={Nathula:[0,-13,"middle"],Tsomgo:[-8,-10,"end"],Baba:[0,24,"middle"],Darjeeling:[-10,4,"end"],Batasia:[-10,6,"end"],Namchi:[-10,4,"end"],Ravangla:[-10,4,"end"],Pelling:[-10,4,"end"],Yumthang:[-10,4,"end"]};
+let WP=[],CUM=[0],TOTAL=1,curWP=0,anim=null,vbAnim=null,curVB=null;
+function setViewBox(to){
+  const m=$("#map");if(!curVB||reduce){curVB=to.slice();m.setAttribute("viewBox",to.join(" "));return}
+  const from=curVB.slice(),t0=performance.now();cancelAnimationFrame(vbAnim);
+  const st=t=>{const k=Math.min(1,(t-t0)/900),e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;curVB=from.map((v,i)=>v+(to[i]-v)*e);m.setAttribute("viewBox",curVB.join(" "));if(k<1)vbAnim=requestAnimationFrame(st)};vbAnim=requestAnimationFrame(st);
+}
+function drawMap(){
+  WP=PLAN.wpn.map(k=>proj(PL[k]));CUM=[0];for(let i=1;i<WP.length;i++)CUM.push(CUM[i-1]+Math.hypot(WP[i][0]-WP[i-1][0],WP[i][1]-WP[i-1][1]));TOTAL=CUM[CUM.length-1];curWP=0;
+  let s='<rect class="land" x="0" y="0" width="400" height="665"/>';
+  ["c_China","c_Nepal","c_Bhutan","c_Bangladesh"].forEach(k=>{if(GEO[k])s+='<path class="ctry" d="'+GEO[k]+'"/>'});
+  ["wb_Darjiling","wb_Jalpaiguri"].forEach(k=>s+='<path class="wb" d="'+GEO[k]+'"/>');
+  ["sk_North","sk_West","sk_South","sk_East"].forEach(k=>s+='<path class="sikkim" d="'+GEO[k]+'"/>');
+  s+='<path class="river" d="'+GEO.river+'"/>';
+  const T=(cls,la,lo,t)=>{const[x,y]=proj([la,lo]);return'<text class="'+cls+'" x="'+x.toFixed(0)+'" y="'+y.toFixed(0)+'" text-anchor="middle">'+t+'</text>'};
+  s+=T("region",27.5,88.42,"SIKKIM")+T("region",26.72,88.12,"NEPAL")+T("region",27.12,88.93,"BHUTAN")+T("region",(PLAN.key==="A"?27.58:28.0),88.9,"CHINA")+T("region",26.83,88.62,"WEST BENGAL");
+  s+=T("dist",27.22,88.27,"West")+T("dist",27.12,88.47,"South")+T("dist",27.24,88.7,"East")+T("dist",27.0,88.8,"Kalimpong")+T("dist",27.75,88.45,"North");
+  const pts=WP.map(p=>p[0].toFixed(1)+" "+p[1].toFixed(1)).join(" L");
+  s+='<path class="route-bg" d="M'+pts+'"/><path class="route" id="routeline" d="M'+pts+'"/>';
+  [...new Set(PLAN.wpn)].filter(k=>k[0]!=="~").forEach(k=>{const [x,y]=proj(PL[k]);const LB=(PLAN.key==="B"&&LBLPOS_B[k])||LBLPOS[k]||[10,4,"start"];
+    s+='<g class="pin" data-place="'+k+'" tabindex="0" role="button" aria-label="'+k+'"><circle cx="'+x+'" cy="'+y+'" r="6"/><text x="'+(x+LB[0])+'" y="'+(y+LB[1])+'" text-anchor="'+LB[2]+'">'+(k==="Baba"?"Baba Mandir":k)+'</text></g>'});
+  s+='<text class="veh" id="veh" text-anchor="middle" dominant-baseline="central">✈️</text>';
+  $("#map").innerHTML=s;setViewBox(PLAN.view);
+  const rl=$("#routeline");rl.style.strokeDasharray=TOTAL;rl.style.strokeDashoffset=TOTAL;
+  document.querySelectorAll(".pin").forEach(p=>{const go=()=>{const k=p.dataset.place,idx=PLAN.wpn.indexOf(k);const st=STOPS.find(x=>Math.round(x.wp)===idx&&x.scene!=="road")||STOPS.find(x=>Math.round(x.wp)===idx);const el=st&&document.getElementById(st.id);if(el){el.scrollIntoView({behavior:reduce?"auto":"smooth",block:"center"});openStop(el,true)}};p.onclick=go;p.onkeydown=e=>{if(e.key==="Enter")go()}});
+}
+function ptAt(wp){const i=Math.min(Math.floor(wp),WP.length-2),f=wp-i;return[WP[i][0]+(WP[i+1][0]-WP[i][0])*f,WP[i][1]+(WP[i+1][1]-WP[i][1])*f,CUM[i]+(CUM[i+1]-CUM[i])*f]}
+function moveTo(wp,isFlight){
+  const veh=$("#veh"),rl=$("#routeline");if(!veh)return;veh.textContent=isFlight?"✈️":"🚕";
+  const from=curWP,to=wp,t0=performance.now(),dur=reduce?0:Math.min(1400,300+Math.abs(to-from)*300);cancelAnimationFrame(anim);
+  const step=t=>{const k=dur?Math.min(1,(t-t0)/dur):1,e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2;const w=from+(to-from)*e;const[x,y,len]=ptAt(Math.max(0,Math.min(WP.length-1,w)));
+    veh.setAttribute("x",x);veh.setAttribute("y",y-12);rl.style.strokeDashoffset=TOTAL-len;curWP=w;if(k<1)anim=requestAnimationFrame(step)};anim=requestAnimationFrame(step);
+  const[vx,vy]=ptAt(wp);document.querySelectorAll(".pin").forEach(p=>{const[x,y]=proj(PL[p.dataset.place]);p.classList.toggle("on",Math.hypot(x-vx,y-vy)<2)});
+}
+
+/* ---------- days ---------- */
+function gmURL(n){const g=PLAN.gm[n],e=encodeURIComponent;return"https://www.google.com/maps/dir/?api=1&origin="+e(g[0])+"&destination="+e(g[1])+(g[2].length?"&waypoints="+e(g[2].join("|")):"")+"&travelmode=driving"}
+let activeId=null;
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){const li=e.target;if(li.id===activeId)return;activeId=li.id;
+  document.querySelectorAll(".stop.active").forEach(x=>x.classList.remove("active"));li.classList.add("active");
+  const s=STOPS.find(x=>x.id===li.id);if(!s)return;moveTo(s.wp,s.scene==="flight");$("#nowstop").textContent=s.title;
+  document.querySelectorAll(".chip").forEach(c=>{const on=+c.dataset.day===s.day;c.setAttribute("aria-current",on);if(on&&window.innerWidth<960)c.parentElement.scrollTo({left:c.offsetLeft-16,behavior:"smooth"})});}})},{rootMargin:"-45% 0px -50% 0px"});
+function drawDays(){
+  let chips="",html="";
+  PLAN.days.forEach(d=>{
+    chips+='<button class="chip" data-day="'+d.n+'" style="--dc:'+d.c+'">Day '+d.n+' <span style="font-weight:400">'+d.date.split(" ").slice(1).join(" ")+'</span></button>';
+    html+='<section class="day" id="day'+d.n+'" style="--dc:'+d.c+'"><div class="dayhead"><div class="daynum">'+d.n+'</div><div class="daydate">'+d.date+' 2026</div><h2>'+d.title+'</h2></div><p class="dayroute">'+d.route+'</p><a class="gmbtn" href="'+gmURL(d.n)+'" target="_blank" rel="noopener">🧭 Open Day '+d.n+' route in Google Maps</a><p class="daynote">'+d.note+'</p><ol class="stops">';
+    STOPS.filter(s=>s.day===d.n).forEach((s,i)=>{
+      const b='<span class="badge '+s.permit+'">'+(s.permit==="none"?"✓ ":s.permit==="ticket"?"🎟 ":"🔴 ")+P[s.permit]+'</span><span class="badge">⏱ '+s.dur+'</span>'+(s.star?'<span class="badge star">★ Highlight</span>':'')+(s.opt?'<span class="badge">Optional</span>':'');
+      html+='<li class="stop" id="'+s.id+'"><button class="card" aria-expanded="false" aria-controls="m'+s.id+'"><div class="thumb">'+scene(s.scene,i+d.n*10)+'</div><div><div class="time">'+fmt(s.t)+'</div><h3>'+s.title+'</h3><p class="short">'+s.short+'</p><div class="badges">'+b+'</div></div></button>'
+        +'<div class="more" id="m'+s.id+'"><div><div class="detail"><div class="bigscene" data-scene="'+s.scene+'" data-seed="'+(i+d.n*10+500)+'"></div>'+(s.det.length?'<ul>'+s.det.map(x=>'<li>'+x+'</li>').join("")+'</ul>':'')+'<a class="gbtn" data-g="'+s.id+'" role="button" tabindex="0">📷 Open photo gallery</a></div></div></div></li>';
+    });
+    html+='</ol></section>';
+  });
+  $("#chips").innerHTML=chips;$("#days").innerHTML=html;
+  document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>document.getElementById("day"+c.dataset.day).scrollIntoView({behavior:reduce?"auto":"smooth"}));
+  document.querySelectorAll(".stop .card").forEach(c=>c.onclick=()=>openStop(c.parentElement));
+  io.disconnect();activeId=null;document.querySelectorAll(".stop").forEach(li=>io.observe(li));
+  $("#nowstop").textContent=STOPS[0].title;
+}
+function openStop(li,force){
+  const open=force?true:!li.classList.contains("open");li.classList.toggle("open",open);li.querySelector(".card").setAttribute("aria-expanded",open);
+  const bs=li.querySelector(".bigscene");if(open&&!bs.innerHTML)bs.innerHTML=scene(bs.dataset.scene,+bs.dataset.seed);
+}
+$("#togglemap").onclick=()=>{const p=$("#panel");const mini=p.classList.toggle("mini");$("#togglemap").textContent=mini?"Show map":"Hide map";$("#togglemap").setAttribute("aria-expanded",!mini)};
+
+/* ---------- altitude chart ---------- */
+function drawAlt(){
+  const ALT=PLAN.alt,W=760,H=300,L=52,R=16,T=20,B=44,px=i=>L+i*(W-L-R)/(ALT.length-1),py=a=>T+(1-a/16000)*(H-T-B);
+  let s='<g class="grid">';[0,4000,8000,12000,16000].forEach(a=>s+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+py(a)+'" y2="'+py(a)+'"/><text x="'+(L-8)+'" y="'+(py(a)+4)+'" text-anchor="end">'+(a/1000)+'k ft</text>');s+='</g>';
+  s+='<rect class="zone" x="'+L+'" y="'+py(16000)+'" width="'+(W-L-R)+'" height="'+(py(10000)-py(16000))+'"/><text class="zonelbl" x="'+(W-R-6)+'" y="'+(py(10000)-6)+'" text-anchor="end">Above 10,000 ft: take it slow</text>';
+  let d="";ALT.forEach((p,i)=>d+=(i?" L":"M")+px(i)+" "+py(p[1]));
+  s+='<path class="area" d="'+d+' L'+px(ALT.length-1)+' '+py(0)+' L'+px(0)+' '+py(0)+'Z"/><path class="ln" d="'+d+'"/>';
+  const keyIx=[0,2,PLAN.altPeak,ALT.length-2,ALT.length-1];
+  ALT.forEach((p,i)=>{s+='<circle class="pt" data-i="'+i+'" cx="'+px(i)+'" cy="'+py(p[1])+'" r="5" tabindex="0"/>';if(keyIx.includes(i)||window.innerWidth>700)s+='<text class="xl" x="'+px(i)+'" y="'+(H-B+18+(i%2)*13)+'" text-anchor="middle">'+p[0]+'</text>'});
+  $("#altchart").innerHTML=s;$("#altlede").textContent=PLAN.altLede;
+  const show=i=>{document.querySelectorAll(".pt").forEach(c=>c.classList.toggle("sel",+c.dataset.i===i));const p=ALT[i];$("#alttip").innerHTML="<b>"+p[0]+"</b> &nbsp;~"+p[1].toLocaleString("en-IN")+" ft <span style='color:var(--muted)'>("+p[2]+")</span><br>"+p[3]};
+  document.querySelectorAll(".pt").forEach(c=>{c.onclick=()=>show(+c.dataset.i);c.onmouseenter=()=>show(+c.dataset.i);c.onkeydown=e=>{if(e.key==="Enter")show(+c.dataset.i)}});show(PLAN.altPeak);
+}
+
+/* ---------- permits & docs ---------- */
+function drawPermits(){
+  $("#permitlede").textContent=PLAN.permitLede;$("#docstitle").textContent=PLAN.docsTitle;$("#permitfine").textContent=PLAN.fine;
+  $("#permitlist").innerHTML=PLAN.permits.map(r=>'<div class="prow"><div>'+r[0]+'<small>'+r[2]+'</small></div><span class="badge '+r[1]+'">'+(r[1]==="none"?"✓ None":"🔴 Required")+'</span></div>').join("");
+  const st=store.get("docs"+PLAN.key,{});
+  $("#doclist").innerHTML=PLAN.docs.map((d,i)=>'<label class="check"><input type="checkbox" data-k="'+i+'" '+(st[i]?"checked":"")+'><span>'+d[0]+'<small>'+d[1]+'</small></span></label>').join("");
+}
+$("#doclist").addEventListener("change",e=>{const k="docs"+PLAN.key,s=store.get(k,{});s[e.target.dataset.k]=e.target.checked;store.set(k,s)});
+
+/* ---------- packing ---------- */
+const PACK={
+ "Documents":["Photo ID your operator accepts for permits","2 passport photos + ID copies","Flight tickets","Hotel and homestay bookings","Some cash for hill-area stops"],
+ "Layers":["Thermal innerwear","Fleece or sweater","Windproof down jacket","Beanie","Gloves","Woollen socks","Scarf or neck buff"],
+ "Feet":["Waterproof shoes with good grip","Extra socks for snow (Tsomgo or Zero Point)","Comfortable walking shoes for town"],
+ "Health":["Personal medicines","Lip balm","Sunscreen, high SPF","UV sunglasses","Motion-sickness tablets for mountain roads","Water bottle"],
+ "Gadgets":["Power bank","Chargers and cables","Offline maps downloaded","Torch for the Tiger Hill pre-dawn"],
+ "Day bag":["Dry snacks","Tissues and wet wipes","Small bag for your trash","Light rain cover"]
+};
+let packCat="All";
+function renderPack(){
+  const st=store.get("pack",{});let all=0,done=0;Object.entries(PACK).forEach(([c,a])=>a.forEach((x,i)=>{all++;if(st[c+i])done++}));
+  $("#cats").innerHTML=["All",...Object.keys(PACK)].map(c=>'<button class="cat" aria-pressed="'+(c===packCat)+'" data-c="'+c+'">'+c+'</button>').join("");
+  let h="";Object.entries(PACK).forEach(([c,a])=>{if(packCat!=="All"&&packCat!==c)return;h+='<h3 style="font-size:17px;margin:16px 0 2px">'+c+'</h3>';a.forEach((x,i)=>h+='<label class="check"><input type="checkbox" data-k="'+c+i+'" '+(st[c+i]?"checked":"")+'><span>'+x+'</span></label>')});
+  $("#packlist").innerHTML=h;const pct=all?Math.round(done/all*100):0;
+  $("#ringfg").style.strokeDashoffset=163.4*(1-pct/100);$("#ringtxt").textContent=pct+"%";$("#packcount").textContent=done+" of "+all+" packed";
+}
+$("#cats").addEventListener("click",e=>{const b=e.target.closest(".cat");if(b){packCat=b.dataset.c;renderPack()}});
+$("#packlist").addEventListener("change",e=>{const s=store.get("pack",{});s[e.target.dataset.k]=e.target.checked;store.set("pack",s);renderPack();if(Object.values(PACK).flat().length===Object.values(s).filter(Boolean).length)toast("All packed. Mountains await")});
+$("#packreset").onclick=()=>{store.set("pack",{});renderPack();toast("Ticks cleared")};
+renderPack();
+
+/* ---------- brief ---------- */
+function drawBrief(){$("#brieftext").textContent=PLAN.brief;$("#wabrief").href="https://wa.me/?text="+encodeURIComponent(PLAN.brief)}
+$("#copybrief").onclick=async()=>{try{await navigator.clipboard.writeText(PLAN.brief);toast("Message copied")}catch(e){toast("Select the text to copy")}};
+
+/* ---------- gallery ---------- */
+let lastFocus=null;
+function openGallery(id){
+  const s=STOPS.find(x=>x.id===id);if(!s)return;lastFocus=document.activeElement;const q=encodeURIComponent(s.q),ix=STOPS.indexOf(s);
+  const old=$("#ghero svg");if(old)old.remove();$("#ghero").insertAdjacentHTML("afterbegin",scene(s.scene,ix+900));
+  $("#gtitle").textContent=s.title;$("#gdesc").textContent=s.short;
+  const dd=PLAN.days[s.day-1];$("#gstrip").innerHTML='<div><small>When</small><b>'+dd.date+', '+fmt(s.t)+'</b></div><div><small>Time here</small><b>'+s.dur+'</b></div><div><small>Permit</small><b>'+P[s.permit]+'</b></div>';
+  const src=[["🖼️","Google Images","Newest photos across the web","https://www.google.com/search?tbm=isch&q="+q],
+   ["📍","Google Maps","Recent visitor photos and reviews","https://www.google.com/maps/search/?api=1&query="+q],
+   ["🏛️","Wikimedia Commons","High-quality free photos","https://commons.wikimedia.org/w/index.php?search="+q+"&title=Special:MediaSearch&type=image"],
+   ["▶️","YouTube","See it in motion","https://www.youtube.com/results?search_query="+q]];
+  $("#gsrcs").innerHTML=src.map(a=>'<a class="src" href="'+a[3]+'" target="_blank" rel="noopener"><span class="ic">'+a[0]+'</span><span><b>'+a[1]+'</b><small>'+a[2]+'</small></span></a>').join("");
+  $("#sheet").scrollTop=0;$("#sheet").classList.add("on");$("#sheetbg").classList.add("on");document.body.style.overflow="hidden";setTimeout(()=>$("#gclose").focus(),60);
+}
+function closeGallery(){if(!$("#sheet").classList.contains("on"))return;$("#sheet").classList.remove("on");$("#sheetbg").classList.remove("on");document.body.style.overflow="";if(lastFocus)lastFocus.focus()}
+document.addEventListener("click",e=>{const b=e.target.closest(".gbtn");if(b){e.preventDefault();openGallery(b.dataset.g)}});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")closeGallery();const b=e.target.closest&&e.target.closest(".gbtn");if(b&&(e.key==="Enter"||e.key===" ")){e.preventDefault();openGallery(b.dataset.g)}});
+$("#gclose").onclick=closeGallery;$("#sheetbg").onclick=closeGallery;
+(function(){let y0=null;const sh=$("#sheet");sh.addEventListener("touchstart",e=>{y0=sh.scrollTop<=0?e.touches[0].clientY:null},{passive:true});sh.addEventListener("touchend",e=>{if(y0!==null&&e.changedTouches[0].clientY-y0>90)closeGallery();y0=null},{passive:true})})();
+
+/* ---------- plan switch ---------- */
+function applyPlan(key,announce){
+  PLAN=PLANS[key];STOPS=PLAN.stops;store.set("plan",key);
+  document.querySelectorAll(".planswitch button").forEach(b=>b.setAttribute("aria-checked",b.dataset.plan===key));
+  $("#herosub").textContent=PLAN.sub;$("#planname").textContent=PLAN.name+": "+PLAN.tag;
+  document.documentElement.dataset.plan=key;
+  drawRidge();drawMap();drawDays();drawAlt();drawPermits();drawBrief();tick();
+  moveTo(0,true);
+  if(announce){const d=$("#days");d.classList.remove("swap");void d.offsetWidth;d.classList.add("swap");toast("Showing "+PLAN.name+": "+PLAN.tag)}
+}
+document.querySelectorAll(".planswitch button").forEach(b=>b.onclick=()=>{if(b.dataset.plan!==PLAN.key)applyPlan(b.dataset.plan,true)});
+applyPlan(PLAN.key,false);
+
+/* ---------- signature ---------- */
+new IntersectionObserver((es,o)=>{es.forEach(e=>{if(e.isIntersecting){$("#sig").classList.add("go");o.disconnect()}})},{threshold:.5}).observe($("#sig"));
+})();
+</script>
+</body>
+</html>
