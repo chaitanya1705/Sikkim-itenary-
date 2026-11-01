@@ -253,7 +253,7 @@ footer p{color:var(--muted);font-size:14px;margin:4px 0}
 .planswitch button[aria-checked="true"]{background:var(--ink);color:var(--bg)}
 @media (min-width:960px){.planswitch{left:auto;right:14px;bottom:auto;top:50%;transform:translateY(-50%);flex-direction:column;width:172px}.planswitch button{padding:12px 14px}}
 @media (min-width:960px) and (max-width:1460px){main.journey{padding-right:200px}body .wrap{padding-right:200px}}
-@media (max-width:959px){footer{padding-bottom:110px}.toast{bottom:calc(env(safe-area-inset-bottom,0px) + 86px)!important}}
+@media (max-width:959px){footer{padding-bottom:40px}.toast{bottom:calc(env(safe-area-inset-bottom,0px) + 86px)!important}}
 .days.swap{animation:swapin .6s ease}
 @keyframes swapin{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
 .toast{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 22px);transform:translate(-50%,120px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;font-weight:700;transition:transform .35s;z-index:99;font-size:15px}
@@ -406,9 +406,9 @@ footer p{color:var(--muted);font-size:14px;margin:4px 0}
   <p><a href="#top">Back to the top</a></p>
 </footer>
 
-<div class="planswitch" role="radiogroup" aria-label="Choose itinerary plan">
+<div class="planswitch" hidden style="display:none" role="radiogroup" aria-label="Choose itinerary plan">
   <button role="radio" data-plan="A" aria-checked="true"><b>Plan A</b><small>East Sikkim + Nathula</small></button>
-  <button role="radio" data-plan="B" aria-checked="false"><b>Plan B</b><small>North Sikkim + Pelling</small></button>
+  <button role="radio" data-plan="B" aria-checked="false" hidden style="display:none"><b>Plan B</b><small>North Sikkim + Pelling</small></button>
 </div>
 <div class="sheetbg" id="sheetbg"></div>
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-labelledby="gtitle"><div class="hero2" id="ghero"><button class="closex" id="gclose" aria-label="Close gallery">✕</button><h3 id="gtitle"></h3></div><div class="in"><p id="gdesc" style="margin:0 0 12px;color:var(--muted)"></p><div class="gstrip" id="gstrip"></div><h4 style="font-family:var(--display);font-size:18px;margin:0 0 10px">Real photos, live from the web</h4><div class="srcs" id="gsrcs"></div><p class="fineprint" style="margin-top:12px">Each link opens the latest photos people have posted of this exact spot.</p></div></div>
@@ -628,7 +628,8 @@ B:{key:"B",name:"Plan B",tag:"North Sikkim + Pelling",
  fine:"North Sikkim reopened to tourists in 2026 after the 2023 floods, but roads can still close for landslides or snow. Reconfirm road status a few days before you fly and agree a fallback with your operator, such as Plan A's East Sikkim day.",
  brief:"We land at Bagdogra on 7th and want to leave for Lachung by 12 PM with the North Sikkim permit ready. On 8th: Yumthang at 5:30–6 AM, then Zero Point, back to Lachung by noon and on to Gangtok by evening. On 9th: Gangtok → Namchi (Char Dham) → Ravangla (Buddha Park) → Pelling. On 10th: leave Pelling by 6:30–7 AM and reach Darjeeling around noon."
 }};
-let PLAN=PLANS[store.get("plan","A")]||PLANS.A;
+/* Plan B is hidden: always show Plan A, even for visitors who previously chose B. */
+let PLAN=PLANS.A;
 let STOPS=PLAN.stops;
 const allStops=()=>PLANS.A.stops.concat(PLANS.B.stops);
 
